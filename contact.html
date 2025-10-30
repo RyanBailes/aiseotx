@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | AISEOTX</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D6251E',
+                        secondary: '#00FF87',
+                        dark: '#121212',
+                    },
+                    fontFamily: {
+                        druk: ['Druk Wide', 'sans-serif'],
+                        anton: ['Anton', 'sans-serif'],
+                        futura: ['Inter', 'Futura', 'Century Gothic', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-white font-sans overflow-x-hidden">
+    <custom-navbar></custom-navbar>
+
+    <!-- Hero Section -->
+    <section class="min-h-[50vh] flex flex-col justify-center items-center relative overflow-hidden bg-black">
+        <div class="absolute inset-0 bg-black opacity-70 z-0"></div>
+        <video autoplay muted loop class="absolute z-0 w-auto min-w-full min-h-full max-w-none">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-motion-graphics-of-a-data-stream-41477-large.mp4" type="video/mp4">
+        </video>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-5xl md:text-7xl font-futura uppercase mb-6 gradient-text">Contact</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Powered by Bailes + Zindler</p>
+</div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-druk uppercase mb-4">This is the Bailes + Zindler Lab.</h2>
+                <p class="text-xl opacity-90 max-w-2xl mx-auto">
+                    AISEOTX is a field project by Bailes + Zindler — the East Texas digital agency exploring the next era of AI-driven discovery.
+                </p>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="bg-black bg-opacity-50 p-8 rounded-lg border border-gray-800">
+                <h3 class="text-2xl font-druk uppercase text-secondary mb-6">Get in Touch</h3>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary"></textarea>
+                    </div>
+                    <button type="submit" class="w-full px-8 py-3 bg-primary hover:bg-opacity-90 transition font-bold">Send Signal</button>
+                </form>
+            </div>
+
+            <div class="text-center mt-12 opacity-80">
+                <p>© 2025 AISEOTX / Bailes + Zindler.</p>
+            </div>
+        </div>
+    </section>
+
+    <custom-footer></custom-footer>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

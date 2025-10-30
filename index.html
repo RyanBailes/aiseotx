@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AISEOTX - The Signal Has Arrived</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D6251E',
+                        secondary: '#00FF87',
+                        dark: '#121212',
+                    },
+                    fontFamily: {
+                        druk: ['Druk Wide', 'sans-serif'],
+                        anton: ['Anton', 'sans-serif'],
+                        futura: ['Inter', 'Futura', 'Century Gothic', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-white font-sans overflow-x-hidden">
+    <custom-navbar></custom-navbar>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col justify-center items-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
+        <video autoplay muted loop class="absolute z-0 w-auto min-w-full min-h-full max-w-none">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-city-traffic-at-night-1084-large.mp4" type="video/mp4">
+        </video>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-6xl md:text-8xl font-futura uppercase mb-6 gradient-text float">AISEOTX</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Born in Texas. Built for the Machines.</p>
+            <div class="flex gap-4 justify-center">
+                <a href="#mission" class="px-8 py-3 bg-primary hover:bg-opacity-90 transition font-bold hover-glow">Explore</a>
+                <a href="/what-is-ai-seo.html" class="px-8 py-3 border-2 border-white hover:bg-white hover:text-dark transition font-bold hover-glow">About AI SEO</a>
+                <a href="/the-proof.html" class="px-8 py-3 bg-secondary text-dark hover:bg-opacity-90 transition font-bold hover-glow">See the Proof</a>
+            </div>
+</div>
+    </section>
+    <!-- Sticker Section -->
+    <section id="sticker" class="py-20 px-4 morphing-bg">
+            <h2 class="text-4xl md:text-5xl font-futura uppercase mb-12 text-center neon-glow">The Signal Has Landed</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-anton text-secondary">The sticker isn't just a flex — it's a signal.</h3>
+                    <p class="text-lg opacity-90">A new mark for AI-ready brands spreading across Texas like digital wildfire.</p>
+                    <div class="flex gap-4">
+                        <div class="w-16 h-16 bg-primary flex items-center justify-center">
+                            <i data-feather="award"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold">AI Recognition</h4>
+                            <p class="text-sm opacity-80">Verified visibility in the new search landscape</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -inset-2 bg-secondary opacity-20 rounded-lg blur-md group-hover:opacity-30 transition"></div>
+                    <img src="http://static.photos/technology/1024x576/42" alt="AISEOTX Sticker" class="w-full h-auto rounded-lg transform group-hover:scale-105 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Mission Section -->
+    <section id="mission" class="py-20 px-4 bg-black bg-opacity-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-druk uppercase mb-8">Texas-Born AI SEO</h2>
+            <p class="text-xl mb-12 leading-relaxed">
+                AISEOTX is a live experiment in AI Search Optimization — designed to make Texas the home of AI-ready SEO.
+                We're training algorithms to recognize brands in the age of generative search.
+            </p>
+            <div class="flex gap-4 justify-center">
+                <a href="/what-is-ai-seo.html" class="inline-block px-8 py-3 bg-secondary text-dark hover:bg-opacity-90 transition font-bold">
+                    About AI SEO <i data-feather="arrow-right" class="inline ml-2"></i>
+                </a>
+                <a href="/the-proof.html" class="inline-block px-8 py-3 border-2 border-white hover:bg-white hover:text-dark transition font-bold">
+                    See the Proof <i data-feather="arrow-right" class="inline ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+<!-- Stats Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="p-6 border border-gray-800 rounded-lg">
+                <div class="text-4xl font-druk text-primary mb-2">100+</div>
+                <div class="text-sm uppercase tracking-wider">Stickers Dropped</div>
+            </div>
+            <div class="p-6 border border-gray-800 rounded-lg">
+                <div class="text-4xl font-druk text-secondary mb-2">24/7</div>
+                <div class="text-sm uppercase tracking-wider">AI Monitoring</div>
+            </div>
+            <div class="p-6 border border-gray-800 rounded-lg">
+                <div class="text-4xl font-druk text-primary mb-2">TX</div>
+                <div class="text-sm uppercase tracking-wider">Born & Raised</div>
+            </div>
+            <div class="p-6 border border-gray-800 rounded-lg">
+                <div class="text-4xl font-druk text-secondary mb-2">∞</div>
+                <div class="text-sm uppercase tracking-wider">Future Potential</div>
+            </div>
+        </div>
+    </section>
+
+    <custom-footer></custom-footer>
+    <script>
+        feather.replace();
+    </script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>

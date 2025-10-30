@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Proof | AISEOTX</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D6251E',
+                        secondary: '#00FF87',
+                        dark: '#121212',
+                    },
+                    fontFamily: {
+                        druk: ['Druk Wide', 'sans-serif'],
+                        anton: ['Anton', 'sans-serif'],
+                        futura: ['Inter', 'Futura', 'Century Gothic', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-white font-sans overflow-x-hidden">
+    <custom-navbar></custom-navbar>
+
+    <!-- Hero Section -->
+    <section class="min-h-[50vh] flex flex-col justify-center items-center relative overflow-hidden bg-black">
+        <div class="absolute inset-0 bg-black opacity-70 z-0"></div>
+        <video autoplay muted loop class="absolute z-0 w-auto min-w-full min-h-full max-w-none">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-motion-graphics-of-a-data-stream-41477-large.mp4" type="video/mp4">
+        </video>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-5xl md:text-7xl font-futura uppercase mb-6 gradient-text">The Proof</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">AI Citations. Verified Visibility.</p>
+</div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-druk uppercase mb-12 text-center">Tracking the Signal</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-gray-800 hover-glow">
+                        <h3 class="text-2xl font-anton text-secondary mb-4">Perplexity → Cited</h3>
+                    <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-gray-800 hover-glow">
+                        <h3 class="text-2xl font-anton text-secondary mb-4">Bing Copilot → Recognized</h3>
+                    <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-gray-800 hover-glow">
+                        <h3 class="text-2xl font-anton text-secondary mb-4">ChatGPT → Linked</h3>
+                    <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-gray-800 hover-glow">
+                        <h3 class="text-2xl font-anton text-secondary mb-4">Claude → Referenced</h3>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -inset-2 bg-secondary opacity-20 rounded-lg blur-md group-hover:opacity-30 transition"></div>
+                    <img src="http://static.photos/technology/1024x576/77" alt="AI Dashboard" class="w-full h-auto rounded-lg transform group-hover:scale-105 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 px-4 bg-black bg-opacity-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-druk uppercase mb-8">Live Metrics</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="p-6 border border-gray-800 rounded-lg hover-glow">
+            <div class="text-3xl font-druk text-primary mb-2">15+</div>
+            <div class="text-sm uppercase tracking-wider">AI Engines</div>
+            </div>
+            <div class="p-6 border border-gray-800 rounded-lg hover-glow">
+            <div class="text-3xl font-druk text-secondary mb-2">247</div>
+            <div class="text-sm uppercase tracking-wider">Citations</div>
+            </div>
+            <div class="p-6 border border-gray-800 rounded-lg hover-glow">
+            <div class="text-3xl font-druk text-primary mb-2">99%</div>
+            <div class="text-sm uppercase tracking-wider">Recognition Rate</div>
+            </div>
+            <div class="p-6 border border-gray-800 rounded-lg hover-glow">
+            <div class="text-3xl font-druk text-secondary mb-2">∞</div>
+            <div class="text-sm uppercase tracking-wider">Future Potential</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-druk uppercase mb-6">Ready to Track Your Signal?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                We're tracking how AI engines read, reference, and reward our sites — and soon, yours.
+            </p>
+            <div class="flex gap-4 justify-center">
+                <a href="/contact.html" class="px-8 py-3 bg-primary hover:bg-opacity-90 transition font-bold">Stay Updated</a>
+                <a href="/what-is-ai-seo.html" class="px-8 py-3 border-2 border-white hover:bg-white hover:text-dark transition font-bold">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <custom-footer></custom-footer>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

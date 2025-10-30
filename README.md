@@ -22,7 +22,6 @@ Follow progress here → [https://aiseotx.com/the-proof](https://aiseotx.com/the
 ---
 
 ## 🧱 Built With
-- **Astro** — fast static/hybrid site generator  
 - **Cloudflare Pages** — edge-hosted, globally cached  
 - **JSON-LD** structured data and `llms.txt` integration  
 - **Bailes + Zindler Design System** for visual identity  

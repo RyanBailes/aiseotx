@@ -71,12 +71,12 @@ class CustomFooter extends HTMLElement {
             <ul>
               <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
               <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-              <li><a href="mailto:contact@aiseotx.com">Email</a></li>
+              <li><a href="mailto:ryan@baileszindler.com">Email</a></li>
             </ul>
           </div>
         </div>
         <div class="copyright">
-          &copy; ${new Date().getFullYear()} AISEOTX. All rights reserved.
+          &copy; ${new Date().getFullYear()} Bailes Zindler. All rights reserved.
         </div>
       </footer>
     `;

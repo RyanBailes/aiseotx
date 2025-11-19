@@ -1,252 +1,114 @@
+/* Custom CSS for AISEOTX */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-/* Custom Scrollbar */
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom button styles */
+.btn-primary {
+    @apply bg-aiseotx-red text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-aiseotx-red focus:ring-offset-2;
+}
+
+.btn-secondary {
+    @apply bg-white text-aiseotx-red border-2 border-aiseotx-red px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:bg-aiseotx-red hover:text-white focus:outline-none focus:ring-2 focus:ring-aiseotx-red focus:ring-offset-2;
+}
+
+/* Card styles */
+.card {
+    @apply bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-cool-gray/10;
+}
+
+.card-header {
+    @apply h-2 rounded-t-xl;
+}
+
+/* Custom animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-up {
+    animation: slideUp 0.6s ease-out;
+}
+
+/* Section spacing */
+section {
+    @apply slide-up;
+}
+
+/* Typography utilities */
+.headline {
+    font-family: 'Bebas Neue', Impact, sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
+/* Custom scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-track {
-    background: #121212;
+    background: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
-    background: #D6251E;
+    background: #e11d1d;
     border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-    background: #b31e18;
+    background: #c81a1a;
 }
 
-/* Futura-like font stack */
-.font-futura {
-    font-family: 'Inter', 'Futura', 'Century Gothic', sans-serif;
-    font-weight: 900;
-    font-style: italic;
-}
-/* Glitch Effect */
-.glitch {
-    position: relative;
-}
-.glitch::before, .glitch::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-}
-.glitch::before {
-    color: #00FF87;
-    z-index: -1;
-    animation: glitch-effect 3s infinite;
-}
-.glitch::after {
-    color: #D6251E;
-    z-index: -2;
-    animation: glitch-effect 2s infinite reverse;
+/* Focus styles for accessibility */
+a:focus, button:focus {
+    @apply outline-none ring-2 ring-aiseotx-red ring-offset-2;
 }
 
-@keyframes glitch-effect {
-    0% { transform: translate(0); }
-    20% { transform: translate(-3px, 3px); }
-    40% { transform: translate(-3px, -3px); }
-    60% { transform: translate(3px, 3px); }
-    80% { transform: translate(3px, -3px); }
-    100% { transform: translate(0); }
-}
-/* Hover Effects */
-.hover-grow {
-    transition: transform 0.3s ease;
-}
-.hover-grow:hover {
-    transform: scale(1.05);
+/* Loading states */
+.loading {
+    @apply opacity-50 pointer-events-none;
 }
 
-/* Glow Effect */
-.hover-glow {
-    transition: all 0.3s ease;
-}
-.hover-glow:hover {
-    box-shadow: 0 0 20px rgba(0, 255, 135, 0.3);
-    border-color: #00FF87;
+/* Custom badge styles */
+.badge {
+    @apply inline-block px-2 py-1 text-xs font-semibold rounded;
 }
 
-/* Gradient Text */
-.gradient-text {
-    background: linear-gradient(45deg, #D6251E, #00FF87);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.badge-red {
+    @apply bg-aiseotx-red text-white;
 }
 
-/* Floating Animation */
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+/* Form styles */
+.form-input {
+    @apply w-full px-4 py-3 border border-cool-gray/30 rounded-lg focus:ring-2 focus:ring-aiseotx-red focus:border-transparent transition-all duration-200;
 }
 
-.float {
-    animation: float 3s ease-in-out infinite;
+/* Mobile menu animation */
+.mobile-menu-enter {
+    transform: translateX(100%);
 }
 
-/* Typewriter Effect */
-@keyframes typewriter {
-    from { width: 0; }
-    to { width: 100%; }
+.mobile-menu-enter-active {
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
 }
 
-.typewriter {
-    overflow: hidden;
-    border-right: 2px solid #00FF87;
-    white-space: nowrap;
-    animation: typewriter 3s steps(40) 1s 1 normal both;
+.mobile-menu-exit {
+    transform: translateX(0);
 }
 
-/* Neon Glow */
-.neon-glow {
-    text-shadow: 0 0 5px #00FF87, 0 0 10px #00FF87, 0 0 15px #00FF87, 0 0 20px #00FF87, 0 0 30px #00FF87, 0 0 40px #00FF87;
+.mobile-menu-exit-active {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
 }
-
-/* Morphing Background */
-.morphing-bg {
-    background: linear-gradient(-45deg, #D6251E, #121212, #00FF87, #121212);
-    background-size: 400% 400%;
-    animation: gradient-shift 8s ease infinite;
-}
-
-@keyframes gradient-shift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Liquid Fill Effect */
-.liquid-fill {
-    position: relative;
-    overflow: hidden;
-}
-
-.liquid-fill::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 255, 135, 0.2), transparent);
-    height: 100%;
-    width: 100%;
-    animation: liquid-fill 3s ease-in-out infinite;
-}
-
-@keyframes liquid-fill {
-    0% { left: -100%; }
-    50% { left: 0%; }
-    100% { left: 100%; }
-}
-
-/* Holographic Effect */
-.holographic {
-    background: linear-gradient(125deg, 
-        #D6251E 0%, 
-        #121212 25%, 
-        #00FF87 50%, 
-        #121212 75%, 
-        #D6251E 100%);
-    background-size: 200% 200%;
-    animation: hologram 4s ease infinite;
-}
-
-@keyframes hologram {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Matrix Rain Effect */
-.matrix-rain {
-    position: relative;
-    overflow: hidden;
-}
-
-.matrix-rain::after {
-    content: '';
-    position: absolute;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(transparent 0%, rgba(0, 255, 135, 0.1) 100%);
-    animation: matrix-fall 2s linear infinite;
-}
-
-@keyframes matrix-fall {
-    0% { transform: translateY(-100%); }
-    100% { transform: translateY(100%); }
-}
-
-/* 3D Flip Card */
-.flip-card {
-    perspective: 1000px;
-}
-
-.flip-card-inner {
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-    backface-visibility: hidden;
-}
-
-.flip-card-back {
-    transform: rotateY(180deg);
-}
-
-/* Cyberpunk Grid */
-.cyber-grid {
-    background-image: 
-        linear-gradient(rgba(0, 255, 135, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 255, 135, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
-    animation: grid-move 20s linear infinite;
-}
-
-@keyframes grid-move {
-    0% { background-position: 0 0; }
-    100% { background-position: 50px 50px; }
-}
-
-/* Particle Effect */
-.particle-container {
-    position: relative;
-}
-
-.particle {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: #00FF87;
-    border-radius: 50%;
-    animation: particle-float 6s ease-in-out infinite;
-}
-
-@keyframes particle-float {
-    0%, 100% { transform: translate(0, 0); }
-    25% { transform: translate(10px, -10px); }
-    50% { transform: translate(-5px, 5px); }
-    75% { transform: translate(5px, -5px); }
-}
-/* Noise Texture */
-.noise::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkEEjIZJ4XJXQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAADMElEQVRo3u2aT0gUURzHP29nd11d/2RRHhLpUJCHoA7dO3QJ6lAQdKpDhw7RqQ5BEB2iQx0i6BAEQRB0iA5BEB0i6hJ0iYj+oK6uWq6uu7Pj7PRmZ3ZnZ3ZnZt3dDfzCwzDz3u/3+b3fe+/3m/egQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUK

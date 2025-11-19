@@ -1,120 +1,229 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AISEOTX - The Signal Has Arrived</title>
+    <title>aiseotx.com - AI SEO Texas Built</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="components/navbar.js"></script>
-    <script src="components/footer.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#D6251E',
-                        secondary: '#00FF87',
-                        dark: '#121212',
+                        'aiseotx-red': '#e11d1d',
+                        'charcoal': '#1a1a1a',
+                        'cool-gray': '#6b7280'
                     },
                     fontFamily: {
-                        druk: ['Druk Wide', 'sans-serif'],
-                        anton: ['Anton', 'sans-serif'],
-                        futura: ['Inter', 'Futura', 'Century Gothic', 'sans-serif'],
+                        'headline': ['"Bebas Neue"', 'Impact', 'sans-serif'],
+                        'body': ['Inter', 'system-ui', 'sans-serif']
                     }
                 }
             }
         }
     </script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-dark text-white font-sans overflow-x-hidden">
-    <custom-navbar></custom-navbar>
+<body class="font-body text-charcoal bg-white">
+    <custom-header></custom-header>
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col justify-center items-center relative overflow-hidden">
-        <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
-        <video autoplay muted loop class="absolute z-0 w-auto min-w-full min-h-full max-w-none">
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-city-traffic-at-night-1084-large.mp4" type="video/mp4">
-        </video>
-        <div class="relative z-10 text-center px-4">
-            <h1 class="text-6xl md:text-8xl font-futura uppercase mb-6 gradient-text float">AISEOTX</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Born in Texas. Built for the Machines.</p>
-            <div class="flex gap-4 justify-center">
-                <a href="#mission" class="px-8 py-3 bg-primary hover:bg-opacity-90 transition font-bold hover-glow">Explore</a>
-                <a href="/what-is-ai-seo.html" class="px-8 py-3 border-2 border-white hover:bg-white hover:text-dark transition font-bold hover-glow">About AI SEO</a>
-                <a href="/the-proof.html" class="px-8 py-3 bg-secondary text-dark hover:bg-opacity-90 transition font-bold hover-glow">See the Proof</a>
-            </div>
-</div>
-    </section>
-    <!-- Sticker Section -->
-    <section id="sticker" class="py-20 px-4 morphing-bg">
-            <h2 class="text-4xl md:text-5xl font-futura uppercase mb-12 text-center neon-glow">The Signal Has Landed</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section class="min-h-screen bg-white flex items-center pt-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
-                    <h3 class="text-3xl font-anton text-secondary">The sticker isn't just a flex — it's a signal.</h3>
-                    <p class="text-lg opacity-90">A new mark for AI-ready brands spreading across Texas like digital wildfire.</p>
-                    <div class="flex gap-4">
-                        <div class="w-16 h-16 bg-primary flex items-center justify-center">
-                            <i data-feather="award"></i>
+                    <div class="inline-flex items-center space-x-2 text-cool-gray uppercase tracking-wider text-sm">
+                        <span>ai search optimization</span>
+                <span>•</span>
+                        <span>texas</span>
+                    </div>
+                    <h1 class="font-headline text-6xl lg:text-8xl leading-none tracking-tight">
+                        ai seo that<br>
+                        <span class="italic">actually ships.</span>
+                    </h1>
+                    <p class="text-xl text-cool-gray max-w-lg leading-relaxed">
+                        A tiny Texas shop helping real businesses show up in Perplexity, Copilot, and AI Overviews before their competitors even know what changed.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="/playbook.html" class="btn-primary">
+                            get the playbook
+                        </a>
+                        <a href="/what-is-ai-seo.html" class="btn-secondary">
+                            see how it works
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-cool-gray/10 rounded-2xl p-8 border-2 border-cool-gray/20">
+                        <div class="bg-white rounded-lg p-6 space-y-4 shadow-lg">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="h-4 bg-cool-gray/20 rounded w-3/4"></div>
+                                <div class="h-4 bg-cool-gray/20 rounded w-1/2"></div>
+                                <div class="h-4 bg-cool-gray/20 rounded w-2/3"></div>
+                            </div>
+                            <div class="bg-aiseotx-red/10 border-l-4 border-aiseotx-red p-4">
+                                <div class="flex items-start space-x-2">
+                                    <div class="w-6 h-6 rounded bg-aiseotx-red flex items-center justify-center text-white text-xs font-bold">
+                                        tx
+                                    </div>
+                                    <div class="text-sm">
+                                        <strong>Best brunch in Tyler:</strong> Based on menu structure and local reviews, Grove offers exceptional weekend brunch with...
+                                </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex-1">
-                            <h4 class="font-bold">AI Recognition</h4>
-                            <p class="text-sm opacity-80">Verified visibility in the new search landscape</p>
+                        <div class="absolute -top-4 -right-4 bg-aiseotx-red text-white px-4 py-2 rounded-lg font-headline text-xl transform -rotate-6 shadow-lg">
+                            aiseotx
                         </div>
                     </div>
                 </div>
-                <div class="relative group">
-                    <div class="absolute -inset-2 bg-secondary opacity-20 rounded-lg blur-md group-hover:opacity-30 transition"></div>
-                    <img src="http://static.photos/technology/1024x576/42" alt="AISEOTX Sticker" class="w-full h-auto rounded-lg transform group-hover:scale-105 transition duration-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- AI SEO Strip -->
+    <section class="bg-aiseotx-red text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="space-y-2">
+                    <h3 class="font-headline text-2xl">what ai seo is</h3>
+                    <p class="text-red-100">Making your site machine-readable for AI search engines</p>
+                </div>
+                <div class="space-y-2">
+                    <h3 class="font-headline text-2xl">who this is for</h3>
+                    <p class="text-red-100">Local businesses, Shopify owners, Texas hustlers</p>
+                </div>
+                <div class="space-y-2">
+                    <h3 class="font-headline text-2xl">the texas angle</h3>
+                    <p class="text-red-100">Built where the work gets done, not in some Silicon Valley boardroom</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Mission Section -->
-    <section id="mission" class="py-20 px-4 bg-black bg-opacity-50">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl font-druk uppercase mb-8">Texas-Born AI SEO</h2>
-            <p class="text-xl mb-12 leading-relaxed">
-                AISEOTX is a live experiment in AI Search Optimization — designed to make Texas the home of AI-ready SEO.
-                We're training algorithms to recognize brands in the age of generative search.
-            </p>
-            <div class="flex gap-4 justify-center">
-                <a href="/what-is-ai-seo.html" class="inline-block px-8 py-3 bg-secondary text-dark hover:bg-opacity-90 transition font-bold">
-                    About AI SEO <i data-feather="arrow-right" class="inline ml-2"></i>
-                </a>
-                <a href="/the-proof.html" class="inline-block px-8 py-3 border-2 border-white hover:bg-white hover:text-dark transition font-bold">
-                    See the Proof <i data-feather="arrow-right" class="inline ml-2"></i>
-                </a>
+
+    <!-- What We Do -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-headline text-5xl text-center mb-12">what we actually do</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card">
+                    <div class="card-header bg-blue-500"></div>
+                    <div class="p-6">
+                        <h3 class="font-headline text-2xl mb-4">structure</h3>
+                        <p class="text-cool-gray">Schemas, llms.txt, internal linking that machines understand instantly</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header bg-green-500"></div>
+                    <div class="p-6">
+                        <h3 class="font-headline text-2xl mb-4">signals</h3>
+                        <p class="text-cool-gray">Content, entities, reputation markers that AI agents look for</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header bg-purple-500"></div>
+                    <div class="p-6">
+                        <h3 class="font-headline text-2xl mb-4">surfaces</h3>
+                        <p class="text-cool-gray">AI Overviews, Perplexity, Copilot, DeepSeek placement</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-<!-- Stats Section -->
-    <section class="py-20 px-4">
-        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div class="p-6 border border-gray-800 rounded-lg">
-                <div class="text-4xl font-druk text-primary mb-2">100+</div>
-                <div class="text-sm uppercase tracking-wider">Stickers Dropped</div>
+
+    <!-- Proof Section -->
+    <section class="py-20 bg-cool-gray/5">
+        <div class="container mx-auto px-4">
+            <h2 class="font-headline text-5xl text-center mb-12">proof from texas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card">
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-cool-gray/20 rounded-lg mb-4"></div>
+                        <h3 class="font-headline text-xl mb-2">Grove</h3>
+                        <p class="text-cool-gray text-sm mb-4">Now showing as "best brunch in Tyler" across multiple AI search platforms</p>
+                        <span class="inline-block bg-aiseotx-red text-white px-3 py-1 rounded text-xs">cited by perplexity</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-cool-gray/20 rounded-lg mb-4"></div>
+                        <h3 class="font-headline text-xl mb-2">Cecil & Lou</h3>
+                        <p class="text-cool-gray text-sm mb-4">Featured in AI Overviews for "vintage clothing Tyler Texas"</p>
+                        <span class="inline-block bg-aiseotx-red text-white px-3 py-1 rounded text-xs">showing in ai overviews</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-cool-gray/20 rounded-lg mb-4"></div>
+                        <h3 class="font-headline text-xl mb-2">ClimatBloc</h3>
+                        <p class="text-cool-gray text-sm mb-4">Ranking for commercial insulation in AI-powered construction searches</p>
+                        <span class="inline-block bg-aiseotx-red text-white px-3 py-1 rounded text-xs">featured in copilot</span>
+                    </div>
+                </div>
             </div>
-            <div class="p-6 border border-gray-800 rounded-lg">
-                <div class="text-4xl font-druk text-secondary mb-2">24/7</div>
-                <div class="text-sm uppercase tracking-wider">AI Monitoring</div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-headline text-5xl text-center mb-12">how aiseotx works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center space-y-4">
+                    <div class="w-16 h-16 bg-aiseotx-red text-white rounded-full flex items-center justify-center mx-auto font-headline text-2xl">
+                1
+                    </div>
+                    <h3 class="font-headline text-2xl">scan your site</h3>
+                    <p class="text-cool-gray">We analyze your current structure and AI readiness</p>
+                </div>
+                <div class="text-center space-y-4">
+                    <div class="w-16 h-16 bg-aiseotx-red text-white rounded-full flex items-center justify-center mx-auto font-headline text-2xl">
+                2
+                    </div>
+                    <h3 class="font-headline text-2xl">rebuild structure</h3>
+                    <p class="text-cool-gray">Machine-first schemas and content that AI understands</p>
+                </div>
+                <div class="text-center space-y-4">
+                    <div class="w-16 h-16 bg-aiseotx-red text-white rounded-full flex items-center justify-center mx-auto font-headline text-2xl">
+                3
+                    </div>
+                    <h3 class="font-headline text-2xl">ship and verify</h3>
+                    <p class="text-cool-gray">We track your appearance across AI search platforms</p>
+                </div>
             </div>
-            <div class="p-6 border border-gray-800 rounded-lg">
-                <div class="text-4xl font-druk text-primary mb-2">TX</div>
-                <div class="text-sm uppercase tracking-wider">Born & Raised</div>
-            </div>
-            <div class="p-6 border border-gray-800 rounded-lg">
-                <div class="text-4xl font-druk text-secondary mb-2">∞</div>
-                <div class="text-sm uppercase tracking-wider">Future Potential</div>
-            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-cool-gray/5">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="font-headline text-5xl mb-6">ready to show up in ai search?</h2>
+            <p class="text-cool-gray text-xl mb-8 max-w-2xl mx-auto">
+                Stop getting left behind. Let's make your business AI-ready.
+            </p>
+            <a href="/contact.html" class="btn-primary text-lg px-8 py-4">
+                get started now
+            </a>
         </div>
     </section>
 
     <custom-footer></custom-footer>
+
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
     <script>
         feather.replace();
     </script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
 </body>
 </html>

@@ -22,15 +22,14 @@ class CustomHeader extends HTMLElement {
                     margin: 0 auto;
                 }
                 .logo {
-                    background: #e11d1d;
-                    color: white;
-                    padding: 0.5rem 0.75rem;
-                    border-radius: 0.5rem;
-                    font-family: 'Bebas Neue', Impact, sans-serif;
-                    font-size: 1.25rem;
-                    font-style: italic;
+                    display: inline-flex;
+                    align-items: center;
                     text-decoration: none;
-                    display: inline-block;
+                }
+                .logo-img {
+                    display: block;
+                    height: 32px;
+                    width: auto;
                 }
                 .nav-desktop {
                     display: none;
@@ -99,7 +98,9 @@ class CustomHeader extends HTMLElement {
                 }
             </style>
             <div class="header-container">
-                <a href="/" class="logo">aiseotx</a>
+                <a href="/" class="logo">
+                    <img src="/images/logo/aiseotx-logo.svg" alt="AISEOTX" class="logo-img" />
+                </a>
                 
                 <nav class="nav-desktop">
                     <a href="https://baileszindler.com/contact" class="btn-primary">contact</a>
@@ -114,7 +115,9 @@ class CustomHeader extends HTMLElement {
                 <div class="overlay" id="overlay"></div>
                 <div class="mobile-menu" id="mobileMenu">
                     <div class="flex justify-between items-center mb-8">
-                        <a href="/" class="logo">aiseotx</a>
+                        <a href="/" class="logo">
+                            <img src="/images/logo/aiseotx-logo.svg" alt="AISEOTX" class="logo-img" />
+                        </a>
                         <button class="menu-button" id="menuClose">
                             <i data-feather="x"></i>
                         </button>
@@ -137,7 +140,6 @@ class CustomHeader extends HTMLElement {
             overlay.classList.add('open');
             document.body.style.overflow = 'hidden';
             
-            // Update icons
             if (typeof feather !== 'undefined') {
                 feather.replace();
             }
@@ -148,7 +150,6 @@ class CustomHeader extends HTMLElement {
             overlay.classList.remove('open');
             document.body.style.overflow = '';
             
-            // Update icons
             if (typeof feather !== 'undefined') {
                 feather.replace();
             }
@@ -158,7 +159,6 @@ class CustomHeader extends HTMLElement {
         menuClose.addEventListener('click', closeMenu);
         overlay.addEventListener('click', closeMenu);
 
-        // Close menu on escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closeMenu();

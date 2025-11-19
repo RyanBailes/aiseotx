@@ -73,7 +73,7 @@ class CustomFooter extends HTMLElement {
                         <a href="/playbook.html" class="footer-link">playbook</a>
                         <a href="/case-studies.html" class="footer-link">case studies</a>
                         <a href="/what-is-ai-seo.html" class="footer-link">what ai seo is</a>
-                        <a href="/contact.html" class="footer-link">contact</a>
+                        <a href="https://baileszindler.com/contact" class="footer-link">contact</a>
                     </div>
                 </div>
                 <div class="footer-bottom">

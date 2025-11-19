@@ -102,9 +102,6 @@ class CustomHeader extends HTMLElement {
                 <a href="/" class="logo">aiseotx</a>
                 
                 <nav class="nav-desktop">
-                    <a href="/playbook.html" class="nav-link">playbook</a>
-                    <a href="/case-studies.html" class="nav-link">case studies</a>
-                    <a href="/what-is-ai-seo.html" class="nav-link">what ai seo is</a>
                     <a href="https://baileszindler.com/contact" class="btn-primary">contact</a>
                 </nav>
                 
@@ -123,9 +120,6 @@ class CustomHeader extends HTMLElement {
                         </button>
                     </div>
                     <nav class="flex flex-col space-y-4">
-                        <a href="/playbook.html" class="nav-link">playbook</a>
-                        <a href="/case-studies.html" class="nav-link">case studies</a>
-                        <a href="/what-is-ai-seo.html" class="nav-link">what ai seo is</a>
                         <a href="https://baileszindler.com/contact" class="btn-primary mt-4">contact</a>
                     </nav>
                 </div>

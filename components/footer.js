@@ -1,86 +1,107 @@
 class CustomFooter extends HTMLElement {
-    connectedCallback() {
-        this.attachShadow({ mode: 'open' });
-        this.shadowRoot.innerHTML = `
-            <style>
-                :host {
-                    display: block;
-                    background: #1a1a1a;
-                    color: white;
-                }
-                .footer-container {
-                    max-width: 1280px;
-                    margin: 0 auto;
-                    padding: 3rem 1.5rem;
-                }
-                .footer-content {
-                    display: grid;
-                    grid-template-columns: 1fr;
-                    gap: 2rem;
-                }
-                .footer-logo {
-                    background: #e11d1d;
-                    color: white;
-                    padding: 0.5rem 0.75rem;
-                    border-radius: 0.5rem;
-                    font-family: 'Bebas Neue', Impact, sans-serif;
-                    font-size: 1.25rem;
-                    font-style: italic;
-                    text-decoration: none;
-                    display: inline-block;
-                    margin-bottom: 1rem;
-                }
-                .footer-links {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 1rem;
-                }
-                .footer-link {
-                    color: #9ca3af;
-                    text-decoration: none;
-                    transition: color 0.2s ease;
-                    text-transform: lowercase;
-                }
-                .footer-link:hover {
-                    color: white;
-                }
-                .footer-bottom {
-                    border-top: 1px solid #374151;
-                    padding-top: 2rem;
-                    margin-top: 2rem;
-                    text-align: center;
-                    color: #9ca3af;
-                }
-                @media (min-width: 768px) {
-                    .footer-content {
-                        grid-template-columns: 2fr 1fr;
-                    }
-                    .footer-links {
-                        flex-direction: row;
-                        justify-content: flex-end;
-                    }
-                }
-            </style>
-            <div class="footer-container">
-                <div class="footer-content">
-                    <div>
-                        <a href="/" class="footer-logo">aiseotx</a>
-                        <p class="text-cool-gray text-sm">
-                            Texas-built AI SEO. Making your business machine-readable for the next generation of search.
-                        </p>
-                    </div>
-                    <div class="footer-links">
-                        <a href="https://baileszindler.com/contact" class="footer-link">contact</a>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p class="text-sm">
-                        &copy; <span id="current-year">2025</span> aiseotx.com • Built in Texas by Bailes Zindler
-                    </p>
-                </div>
-            </div>
-        `;
-    }
+  connectedCallback() {
+    const year = new Date().getFullYear();
+
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.innerHTML = `
+      <style>
+        .footer {
+          background: #000000;
+          border-top: 4px solid #ED1C24;
+          padding: 3rem 2rem;
+          font-family: 'AISEOGrotesk', system-ui, sans-serif;
+          text-align: center;
+        }
+        
+        .footer-label {
+          max-width: 420px;
+          margin: 0 auto;
+          border: 2px solid #ffffff;
+          padding: 2rem;
+        }
+
+        .footer-badge {
+          font-family: 'AISEOCondBoldOblique', system-ui, sans-serif;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.18em;
+          font-size: 0.8rem;
+          margin-bottom: 0.4rem;
+          color: #ED1C24;
+        }
+
+        .footer-subbadge {
+          font-size: 0.65rem;
+          text-transform: uppercase;
+          letter-spacing: 0.16em;
+          color: #ffffff;
+          opacity: 0.8;
+          margin-bottom: 1.5rem;
+        }
+        
+        .footer-text {
+          font-size: 0.75rem;
+          line-height: 1.6;
+          text-transform: uppercase;
+          letter-spacing: 0.12em;
+        }
+        
+        .footer-line {
+          margin-bottom: 0.5rem;
+        }
+        
+        .footer-accent {
+          color: #ED1C24;
+          font-weight: 700;
+        }
+        
+        .footer-meta {
+          margin-top: 1.5rem;
+          font-size: 0.7rem;
+          color: #888888;
+          text-transform: uppercase;
+          letter-spacing: 0.14em;
+        }
+
+        .footer-link {
+          color: #ffffff;
+          text-decoration: none;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+          padding-bottom: 2px;
+        }
+
+        .footer-link:hover {
+          border-bottom-color: #ED1C24;
+          color: #ED1C24;
+        }
+      </style>
+      
+      <footer class="footer">
+        <div class="footer-label">
+          <div class="footer-badge">
+            AISEOTX.COM
+          </div>
+          <div class="footer-subbadge">
+            MACHINE FIRST OPTIMIZATION
+          </div>
+
+          <div class="footer-text">
+            <div class="footer-line">100% MACHINE OPTIMIZED</div>
+            <div class="footer-line">MADE IN TEXAS</div>
+            <div class="footer-line">STRUCTURE VERIFIED</div>
+            <div class="footer-line">AI OVERVIEW READY</div>
+          </div>
+          
+          <div class="footer-meta">
+            © ${year} AISEOTX · SYSTEM BY 
+            <a href="https://baileszindler.com" class="footer-link" target="_blank" rel="noopener noreferrer">
+              BAILES + ZINDLER
+            </a>
+          </div>
+        </div>
+      </footer>
+    `;
+  }
 }
 
 customElements.define('custom-footer', CustomFooter);

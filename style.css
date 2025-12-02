@@ -1,54 +1,142 @@
-/* Custom CSS for AISEOTX */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
-
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
+/* === AISEO Display Font === */
+@font-face {
+    font-family: 'aiseo_cond_extra_bold_oblique';
+    src: url('/fonts/aiseo_cond_extra_bold_oblique.woff2') format('woff2'),
+         url('/fonts/aiseo_cond_extra_bold_oblique.woff') format('woff');
+    font-weight: 800;
+    font-style: oblique;
+    font-display: swap;
 }
 
-/* Custom button styles */
-.btn-primary {
-    @apply bg-aiseotx-red text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-aiseotx-red focus:ring-offset-2;
-}
-
-.btn-secondary {
-    @apply bg-white text-aiseotx-red border-2 border-aiseotx-red px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:bg-aiseotx-red hover:text-white focus:outline-none focus:ring-2 focus:ring-aiseotx-red focus:ring-offset-2;
-}
-
-/* Card styles */
-.card {
-    @apply bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-cool-gray/10;
-}
-
-.card-header {
-    @apply h-2 rounded-t-xl;
-}
-
-/* Custom animations */
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.slide-up {
-    animation: slideUp 0.6s ease-out;
-}
-
-/* Section spacing */
-section {
-    @apply slide-up;
-}
-
-/* Typography utilities */
-.headline {
-    font-family: 'Bebas Neue', Impact, sans-serif;
+/* === AISEO Body Font === */
+@font-face {
+    font-family: 'aiseo_grotesk_text_pro';
+    src: url('/fonts/aiseo_grotesk_text_pro.woff2') format('woff2'),
+         url('/fonts/aiseo_grotesk_text_pro.woff') format('woff');
     font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Display font for all hype headers */
+.font-display {
+    font-family: 'aiseo_cond_extra_bold_oblique', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+}
+
+/* Optional helper if you want to force body font somewhere */
+.font-body {
+    font-family: 'aiseo_grotesk_text_pro', sans-serif;
+}
+
+body {
+    font-family: 'aiseo_grotesk_text_pro', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* MACHINE CAMO BACKGROUND */
+.machine-camo-pattern {
+    background-image: 
+        radial-gradient(circle at 25% 25%, #ED1C24 2px, transparent 2px),
+        radial-gradient(circle at 75% 75%, #FFD300 2px, transparent 2px),
+        linear-gradient(45deg, transparent 49%, #ffffff 49%, #ffffff 51%, transparent 51%);
+    background-size: 50px 50px, 50px 50px, 100px 100px;
+    animation: camoMove 20s linear infinite;
+}
+
+@keyframes camoMove {
+    0% {
+        background-position: 0 0, 0 0, 0 0;
+    }
+    100% {
+        background-position: 100px 100px, -100px -100px, 200px 200px;
+    }
+}
+
+/* Jet breaking out of frame animation */
+@keyframes jetFly {
+    0% {
+        transform: translateX(-100%) rotate(-5deg);
+    }
+    100% {
+        transform: translateX(100%) rotate(-5deg);
+    }
+}
+
+.jet-breakout {
+    position: relative;
+    overflow: hidden;
+}
+
+.jet-breakout::before {
+    content: "✈️";
+    position: absolute;
+    font-size: 2rem;
+    top: 50%;
+    left: -50px;
+    animation: jetFly 8s linear infinite;
+}
+
+/* Supreme-style box logo animation */
+.box-logo {
+    box-shadow: 
+        0 0 0 4px #ffffff,
+        0 0 0 8px #ED1C24,
+        0 0 0 12px #ffffff;
+    animation: pulseBox 4s ease-in-out infinite;
+}
+
+@keyframes pulseBox {
+    0%, 100% {
+        transform: rotate(2deg) scale(1);
+    }
+    50% {
+        transform: rotate(-1deg) scale(1.02);
+    }
+}
+
+/* Off-White inspired diagonal stripes */
+.diagonal-stripes {
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        #ED1C24 10px,
+        #ED1C24 20px
+    );
+}
+
+/* Streetwear badge styles */
+.street-badge {
+    background: #000000;
+    border: 2px solid #ED1C24;
+    transform: skew(-5deg);
+    display: inline-block;
+}
+
+/* Hypebeast hover effects */
+.hype-hover {
+    transition: all 0.3s ease;
+}
+
+.hype-hover:hover {
+    transform: translateY(-5px) rotate(1deg);
+    box-shadow: 0 10px 25px rgba(237, 28, 36, 0.3);
+}
+
+/* Industrial font weights */
+.font-industrial-black {
+    font-weight: 900;
     letter-spacing: -0.02em;
 }
 
@@ -58,57 +146,37 @@ section {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #e11d1d;
-    border-radius: 4px;
+    background: #ED1C24;
+    border-radius: 0;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #c81a1a;
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .box-logo {
+        transform: scale(0.8);
+    }
+    
+    .machine-camo-pattern {
+        background-size: 30px 30px, 30px 30px, 60px 60px;
+    }
 }
 
-/* Focus styles for accessibility */
-a:focus, button:focus {
-    @apply outline-none ring-2 ring-aiseotx-red ring-offset-2;
+/* Loading animation for streetwear vibe */
+.loading-street {
+    background: linear-gradient(90deg, #000000 25%, #ED1C24 50%, #000000 75%);
+    background-size: 200% 100%;
+    animation: loadingShift 2s ease-in-out infinite;
 }
 
-/* Loading states */
-.loading {
-    @apply opacity-50 pointer-events-none;
-}
-
-/* Custom badge styles */
-.badge {
-    @apply inline-block px-2 py-1 text-xs font-semibold rounded;
-}
-
-.badge-red {
-    @apply bg-aiseotx-red text-white;
-}
-
-/* Form styles */
-.form-input {
-    @apply w-full px-4 py-3 border border-cool-gray/30 rounded-lg focus:ring-2 focus:ring-aiseotx-red focus:border-transparent transition-all duration-200;
-}
-
-/* Mobile menu animation */
-.mobile-menu-enter {
-    transform: translateX(100%);
-}
-
-.mobile-menu-enter-active {
-    transform: translateX(0);
-    transition: transform 0.3s ease-out;
-}
-
-.mobile-menu-exit {
-    transform: translateX(0);
-}
-
-.mobile-menu-exit-active {
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in;
+@keyframes loadingShift {
+    0%, 100% {
+        background-position: 200% 0;
+    }
+    50% {
+        background-position: -200% 0;
+    }
 }

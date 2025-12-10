@@ -204,6 +204,7 @@ class CustomNavbar extends HTMLElement {
             <a href="#capsules" class="nav-link">Capsules</a>
             <a href="#proof" class="nav-link">Proof</a>
             <a href="#aiseo" class="nav-link">What is AISEO</a>
+            <a href="/old-school-tyler" class="nav-link">Old School Tyler</a>      
             <span class="status-badge">System Active</span>
             <a href="https://baileszindler.com/contact" class="nav-link nav-cta" target="_blank" rel="noopener noreferrer">
               Access
@@ -220,6 +221,7 @@ class CustomNavbar extends HTMLElement {
             <a href="#capsules" class="mobile-link">Capsules</a>
             <a href="#proof" class="mobile-link">Proof</a>
             <a href="#aiseo" class="mobile-link">What is AISEO</a>
+            <a href="/old-school-tyler" class="mobile-link">Old School Tyler</a>      
             <a href="https://baileszindler.com/contact" class="mobile-link mobile-link-cta" target="_blank" rel="noopener noreferrer">
               Access System
             </a>

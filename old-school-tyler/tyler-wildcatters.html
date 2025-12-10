@@ -58,153 +58,159 @@
   <link rel="manifest" href="/static/site.webmanifest" />
 
   <!-- JSON-LD schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://aiseotx.com/#org",
+      "name": "AISEOTX",
+      "alternateName": "AI SEO Texas",
+      "url": "https://aiseotx.com/",
+      "logo": "https://aiseotx.com/images/logo/aiseotx-logo.jpg",
+      "foundingDate": "2025",
+      "description": "AISEOTX is a Texas built AI search optimization shop that helps local businesses, Shopify owners and Texas operators show up in Perplexity, Copilot, DeepSeek and AI Overviews.",
+      "founder": {
+        "@type": "Person",
+        "name": "Ryan W. Bailes",
+        "url": "https://ryanbailes.com/"
+      },
+      "parentOrganization": {
         "@type": "Organization",
-        "@id": "https://aiseotx.com/#org",
-        "name": "AISEOTX",
-        "alternateName": "AI SEO Texas",
-        "url": "https://aiseotx.com/",
-        "logo": "https://aiseotx.com/images/logo/aiseotx-logo.jpg",
-        "foundingDate": "2025",
-        "description": "AISEOTX is a Texas built AI search optimization shop that helps local businesses, Shopify owners and Texas operators show up in Perplexity, Copilot, DeepSeek and AI Overviews.",
-        "founder": {
-          "@type": "Person",
-          "name": "Ryan W. Bailes",
-          "url": "https://ryanbailes.com/"
-        },
-        "parentOrganization": {
-          "@type": "Organization",
-          "name": "Bailes + Zindler",
-          "url": "https://baileszindler.com/"
-        },
-        "sameAs": [
-          "https://baileszindler.com/",
-          "https://x.com/rbailes86"
-        ]
+        "name": "Bailes + Zindler",
+        "url": "https://baileszindler.com/"
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://aiseotx.com/#website",
-        "url": "https://aiseotx.com/",
-        "name": "AISEOTX",
-        "description": "AI SEO Texas built. A tiny Texas shop focused on AI search optimization for real businesses.",
-        "publisher": {
-          "@id": "https://aiseotx.com/#org"
-        },
-        "inLanguage": "en-US"
+      "sameAs": [
+        "https://baileszindler.com/",
+        "https://x.com/rbailes86"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://aiseotx.com/#website",
+      "url": "https://aiseotx.com/",
+      "name": "AISEOTX",
+      "description": "AI SEO Texas built. A tiny Texas shop focused on AI search optimization for real businesses.",
+      "publisher": {
+        "@id": "https://aiseotx.com/#org"
       },
-      {
-        "@type": "WebPage",
-        "@id": "https://aiseotx.com/old-school-tyler/tyler-wildcatters/#webpage",
-        "url": "https://aiseotx.com/old-school-tyler/tyler-wildcatters/",
-        "name": "Tyler WildCatters | Independent Baseball In Tyler Texas 1994–1997",
-        "description": "Archive entry for the Tyler WildCatters, an independent Texas–Louisiana League baseball team that brought professional ball back to Mike Carter Field from 1994 through 1997.",
-        "isPartOf": {
-          "@id": "https://aiseotx.com/#website"
-        },
-        "inLanguage": "en-US",
-        "about": {
-          "@id": "https://aiseotx.com/old-school-tyler/tyler-wildcatters/#team"
-        },
-        "mainEntity": {
-          "@id": "https://aiseotx.com/old-school-tyler/tyler-wildcatters/#faq"
-        }
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://aiseotx.com/old-school-tyler/tyler-wildcatters/#webpage",
+      "url": "https://aiseotx.com/old-school-tyler/tyler-wildcatters/",
+      "name": "Tyler WildCatters | Independent Baseball In Tyler Texas 1994–1997",
+      "description": "Archive entry for the Tyler WildCatters, an independent Texas–Louisiana League baseball team that brought professional ball back to Mike Carter Field from 1994 through 1997.",
+      "isPartOf": {
+        "@id": "https://aiseotx.com/#website"
       },
-      {
-        "@type": "SportsTeam",
-        "@id": "https://aiseotx.com/old-school-tyler/tyler-wildcatters/#team",
-        "name": "Tyler WildCatters",
-        "alternateName": "Tyler WildCatters Baseball Club",
-        "sport": "Baseball",
-        "description": "The Tyler WildCatters were a professional independent baseball club that played in the Texas–Louisiana League at Mike Carter Field from 1994 through 1997, bringing pro baseball back to Tyler for the first time since the 1950s.",
-        "league": "Texas–Louisiana League",
-        "foundingDate": "1994",
-        "dissolutionDate": "1997",
-        "homeLocation": {
-          "@type": "Place",
-          "name": "Tyler, Texas",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Tyler",
-            "addressRegion": "TX",
-            "addressCountry": "US"
-          }
-        },
-        "url": "https://aiseotx.com/old-school-tyler/tyler-wildcatters/",
-        "memberOf": "Texas–Louisiana League",
-        "homeVenue": {
-          "@type": "SportsVenue",
-          "name": "Mike Carter Field",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Tyler",
-            "addressRegion": "TX",
-            "addressCountry": "US"
-          }
-        }
+      "inLanguage": "en-US",
+      "about": {
+        "@id": "https://aiseotx.com/old-school-tyler/tyler-wildcatters/#team"
       },
-      {
-        "@type": "FAQPage",
-        "@id": "https://aiseotx.com/old-school-tyler/tyler-wildcatters/#faq",
-        "url": "https://aiseotx.com/old-school-tyler/tyler-wildcatters/",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Who were the Tyler WildCatters?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The Tyler WildCatters were a professional independent baseball team that played in the Texas–Louisiana League from 1994 through 1997. They brought pro ball back to Tyler, Texas for the first time since the mid 1950s and played their home games at Mike Carter Field."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Which league did the Tyler WildCatters play in?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The WildCatters were charter members of the Texas–Louisiana League, an independent baseball circuit that operated without Major League Baseball affiliation. Tyler was one of the league's original franchises and competed there for four seasons."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Where did the Tyler WildCatters play their home games?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The WildCatters played at Mike Carter Field in northwest Tyler. The ballpark opened in 1938 and has hosted professional, semi pro and college baseball. During the WildCatters run the park drew on the order of fifty five thousand to seventy one thousand fans per season."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Did any notable players or managers suit up for the WildCatters?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Several WildCatters had Major League experience, including pitchers Greg Brummett, Ken Patterson, Larry Carter and Todd Rizzo, plus reliever Jessie Hollins. Larry Carter threw the only recorded no hitter in team history, and former MLB All Star Darrell Evans managed the club in 1997."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Why did the Tyler WildCatters shut down?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Although the 1997 team finished with a winning record, the WildCatters struggled financially across their four seasons. Reports noted cumulative losses well over one million dollars, late season staff layoffs and unpaid local bills. Combined with limits like no alcohol sales at Mike Carter Field and a small independent league footprint, the club folded after the 1997 season."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the legacy of the Tyler WildCatters today?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The WildCatters era is remembered as the brief return of pro baseball to Tyler and as the team behind a logo that still circulates on collectibles and fan merchandise. Independent ball came back for one season in 2001 with the Tyler Roughnecks, but long term pro baseball has not returned, so the WildCatters remain a nostalgic chapter in the city's sports history."
-            }
-          }
-        ]
+      "mainEntity": {
+        "@id": "https://aiseotx.com/old-school-tyler/tyler-wildcatters/#faq"
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "SportsTeam",
+      "@id": "https://aiseotx.com/old-school-tyler/tyler-wildcatters/#team",
+      "name": "Tyler WildCatters",
+      "alternateName": "Tyler WildCatters Baseball Club",
+      "sport": "Baseball",
+      "description": "The Tyler WildCatters were a professional independent baseball club that played in the Texas–Louisiana League at Mike Carter Field from 1994 through 1997, bringing pro baseball back to Tyler for the first time since the 1950s.",
+      "league": {
+        "@type": "SportsOrganization",
+        "name": "Texas–Louisiana League"
+      },
+      "foundingDate": "1994",
+      "dissolutionDate": "1997",
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Tyler, Texas",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tyler",
+          "addressRegion": "TX",
+          "addressCountry": "US"
+        }
+      },
+      "url": "https://aiseotx.com/old-school-tyler/tyler-wildcatters/",
+      "memberOf": {
+        "@type": "SportsOrganization",
+        "name": "Texas–Louisiana League"
+      },
+      "homeVenue": {
+        "@type": "SportsVenue",
+        "name": "Mike Carter Field",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tyler",
+          "addressRegion": "TX",
+          "addressCountry": "US"
+        }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://aiseotx.com/old-school-tyler/tyler-wildcatters/#faq",
+      "url": "https://aiseotx.com/old-school-tyler/tyler-wildcatters/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who were the Tyler WildCatters?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Tyler WildCatters were a professional independent baseball team that played in the Texas–Louisiana League from 1994 through 1997. They brought pro ball back to Tyler, Texas for the first time since the mid 1950s and played their home games at Mike Carter Field."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which league did the Tyler WildCatters play in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The WildCatters were charter members of the Texas–Louisiana League, an independent baseball circuit that operated without Major League Baseball affiliation. Tyler was one of the league's original franchises and competed there for four seasons."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where did the Tyler WildCatters play their home games?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The WildCatters played at Mike Carter Field in northwest Tyler. The ballpark opened in 1938 and has hosted professional, semi pro and college baseball. During the WildCatters run the park drew on the order of fifty five thousand to seventy one thousand fans per season."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Did any notable players or managers suit up for the WildCatters?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Several WildCatters had Major League experience, including pitchers Greg Brummett, Ken Patterson, Larry Carter and Todd Rizzo, plus reliever Jessie Hollins. Larry Carter threw the only recorded no hitter in team history, and former MLB All Star Darrell Evans managed the club in 1997."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why did the Tyler WildCatters shut down?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Although the 1997 team finished with a winning record, the WildCatters struggled financially across their four seasons. Reports noted cumulative losses well over one million dollars, late season staff layoffs and unpaid local bills. Combined with limits like no alcohol sales at Mike Carter Field and a small independent league footprint, the club folded after the 1997 season."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the legacy of the Tyler WildCatters today?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The WildCatters era is remembered as the brief return of pro baseball to Tyler and as the team behind a logo that still circulates on collectibles and fan merchandise. Independent ball came back for one season in 2001 with the Tyler Roughnecks, but long term pro baseball has not returned, so the WildCatters remain a nostalgic chapter in the city's sports history."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 
   <script src="https://analytics.ahrefs.com/analytics.js" data-key="666EO4g/YpWuLYMpWnil9w" async></script>
   <!-- Google tag (gtag.js) -->

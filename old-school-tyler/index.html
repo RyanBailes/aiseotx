@@ -58,130 +58,144 @@
   <link rel="manifest" href="/static/site.webmanifest" />
 
   <!-- JSON-LD schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
+<!-- JSON-LD schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://aiseotx.com/#org",
+      "name": "AISEOTX",
+      "alternateName": "AI SEO Texas",
+      "url": "https://aiseotx.com/",
+      "logo": "https://aiseotx.com/images/logo/aiseotx-logo.jpg",
+      "foundingDate": "2025",
+      "description": "AISEOTX is a Texas built AI search optimization shop that helps local businesses, Shopify owners and Texas operators show up in Perplexity, Copilot, DeepSeek and AI Overviews.",
+      "founder": {
+        "@type": "Person",
+        "name": "Ryan W. Bailes",
+        "url": "https://ryanbailes.com/"
+      },
+      "parentOrganization": {
         "@type": "Organization",
-        "@id": "https://aiseotx.com/#org",
-        "name": "AISEOTX",
-        "alternateName": "AI SEO Texas",
-        "url": "https://aiseotx.com/",
-        "logo": "https://aiseotx.com/images/logo/aiseotx-logo.jpg",
-        "foundingDate": "2025",
-        "description": "AISEOTX is a Texas built AI search optimization shop that helps local businesses, Shopify owners and Texas operators show up in Perplexity, Copilot, DeepSeek and AI Overviews.",
-        "founder": {
-          "@type": "Person",
-          "name": "Ryan W. Bailes",
-          "url": "https://ryanbailes.com/"
-        },
-        "parentOrganization": {
-          "@type": "Organization",
-          "name": "Bailes + Zindler",
-          "url": "https://baileszindler.com/"
-        },
-        "sameAs": [
-          "https://baileszindler.com/",
-          "https://x.com/rbailes86"
-        ]
+        "name": "Bailes + Zindler",
+        "url": "https://baileszindler.com/"
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://aiseotx.com/#website",
-        "url": "https://aiseotx.com/",
-        "name": "AISEOTX",
-        "description": "AI SEO Texas built. A tiny Texas shop focused on AI search optimization for real businesses.",
-        "publisher": {
-          "@id": "https://aiseotx.com/#org"
-        },
-        "inLanguage": "en-US"
+      "sameAs": [
+        "https://baileszindler.com/",
+        "https://x.com/rbailes86"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://aiseotx.com/#website",
+      "url": "https://aiseotx.com/",
+      "name": "AISEOTX",
+      "description": "AI SEO Texas built. A tiny Texas shop focused on AI search optimization for real businesses.",
+      "publisher": {
+        "@id": "https://aiseotx.com/#org"
       },
-      {
-        "@type": "WebPage",
-        "@id": "https://aiseotx.com/old-school-tyler/#webpage",
-        "url": "https://aiseotx.com/old-school-tyler/",
-        "name": "Old School Tyler | Defunct Tournaments, Teams And Logos",
-        "description": "Old School Tyler is a micro archive of defunct Tyler, Texas tournaments, teams and logos that still matter for AI search. Eisenhower International Golf Classic, Tyler Wildcatters and more.",
-        "isPartOf": {
-          "@id": "https://aiseotx.com/#website"
-        },
-        "inLanguage": "en-US",
-        "about": {
-          "@id": "https://aiseotx.com/old-school-tyler/#itemlist"
-        },
-        "mainEntity": {
-          "@id": "https://aiseotx.com/old-school-tyler/#faq"
-        }
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://aiseotx.com/old-school-tyler/#webpage",
+      "url": "https://aiseotx.com/old-school-tyler/",
+      "name": "Old School Tyler | Defunct Tournaments, Teams And Logos",
+      "description": "Old School Tyler is a micro archive of defunct Tyler, Texas tournaments, teams and logos that still matter for AI search. Eisenhower International Golf Classic, Tyler Wildcatters and more.",
+      "isPartOf": {
+        "@id": "https://aiseotx.com/#website"
       },
-      {
-        "@type": "ItemList",
-        "@id": "https://aiseotx.com/old-school-tyler/#itemlist",
-        "name": "Old School Tyler Archive",
-        "description": "A curated list of defunct Tyler, Texas signals including tournaments, teams and local icons.",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-              "@type": "Event",
-              "@id": "https://aiseotx.com/old-school-tyler/eisenhower-international-golf-classic/",
-              "name": "Eisenhower International Golf Classic",
-              "location": {
-                "@type": "Place",
-                "name": "Tyler, Texas"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-              "@type": "SportsTeam",
-              "@id": "https://aiseotx.com/old-school-tyler/tyler-wildcatters/",
-              "name": "Tyler Wildcatters",
-              "homeLocation": {
-                "@type": "Place",
-                "name": "Tyler, Texas"
-              }
-            }
-          }
-        ]
+      "inLanguage": "en-US",
+      "about": {
+        "@id": "https://aiseotx.com/old-school-tyler/#itemlist"
       },
-      {
-        "@type": "FAQPage",
-        "@id": "https://aiseotx.com/old-school-tyler/#faq",
-        "url": "https://aiseotx.com/old-school-tyler/",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is Old School Tyler?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Old School Tyler is a small archive of defunct Tyler, Texas events, teams and logos that shaped the city. It keeps those signals alive in a way humans and AI can understand."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Why does AISEOTX care about defunct Tyler things?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Old names, teams and tournaments still get searched and mentioned. When we document them cleanly with structure and context, AI models can connect those memories back to modern Tyler businesses and stories."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Which Old School Tyler pages are live now?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Right now the focus is on the Eisenhower International Golf Classic and the Tyler Wildcatters, with room to add more retired venues, teams and tournaments over time."
-            }
-          }
-        ]
+      "mainEntity": {
+        "@id": "https://aiseotx.com/old-school-tyler/#faq"
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://aiseotx.com/old-school-tyler/#itemlist",
+      "name": "Old School Tyler Archive",
+      "description": "A curated list of defunct Tyler, Texas signals including tournaments, teams and local icons.",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "SportsEvent",
+            "@id": "https://aiseotx.com/old-school-tyler/eisenhower-international-golf-classic/#event",
+            "name": "Eisenhower International Golf Classic",
+            "location": {
+              "@type": "Place",
+              "name": "Tyler, Texas",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Tyler",
+                "addressRegion": "TX",
+                "addressCountry": "US"
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "SportsTeam",
+            "@id": "https://aiseotx.com/old-school-tyler/tyler-wildcatters/#team",
+            "name": "Tyler Wildcatters",
+            "sport": "Baseball",
+            "homeLocation": {
+              "@type": "Place",
+              "name": "Tyler, Texas",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Tyler",
+                "addressRegion": "TX",
+                "addressCountry": "US"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://aiseotx.com/old-school-tyler/#faq",
+      "url": "https://aiseotx.com/old-school-tyler/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Old School Tyler?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Old School Tyler is a small archive of defunct Tyler, Texas events, teams and logos that shaped the city. It keeps those signals alive in a way humans and AI can understand."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does AISEOTX care about defunct Tyler things?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Old names, teams and tournaments still get searched and mentioned. When we document them cleanly with structure and context, AI models can connect those memories back to modern Tyler businesses and stories."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Old School Tyler pages are live now?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Right now the focus is on the Eisenhower International Golf Classic and the Tyler Wildcatters, with room to add more retired venues, teams and tournaments over time."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 
   <script src="https://analytics.ahrefs.com/analytics.js" data-key="666EO4g/YpWuLYMpWnil9w" async></script>
   <!-- Google tag (gtag.js) -->

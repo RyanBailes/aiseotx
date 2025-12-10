@@ -58,134 +58,145 @@
   <link rel="manifest" href="/static/site.webmanifest" />
 
   <!-- JSON-LD schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://aiseotx.com/#org",
+      "name": "AISEOTX",
+      "alternateName": "AI SEO Texas",
+      "url": "https://aiseotx.com/",
+      "logo": "https://aiseotx.com/images/logo/aiseotx-logo.jpg",
+      "foundingDate": "2025",
+      "description": "AISEOTX is a Texas built AI search optimization shop that helps local businesses, Shopify owners and Texas operators show up in Perplexity, Copilot, DeepSeek and AI Overviews.",
+      "founder": {
+        "@type": "Person",
+        "name": "Ryan W. Bailes",
+        "url": "https://ryanbailes.com/"
+      },
+      "parentOrganization": {
         "@type": "Organization",
-        "@id": "https://aiseotx.com/#org",
-        "name": "AISEOTX",
-        "alternateName": "AI SEO Texas",
-        "url": "https://aiseotx.com/",
-        "logo": "https://aiseotx.com/images/logo/aiseotx-logo.jpg",
-        "foundingDate": "2025",
-        "description": "AISEOTX is a Texas built AI search optimization shop that helps local businesses, Shopify owners and Texas operators show up in Perplexity, Copilot, DeepSeek and AI Overviews.",
-        "founder": {
-          "@type": "Person",
-          "name": "Ryan W. Bailes",
-          "url": "https://ryanbailes.com/"
-        },
-        "parentOrganization": {
-          "@type": "Organization",
-          "name": "Bailes + Zindler",
-          "url": "https://baileszindler.com/"
-        },
-        "sameAs": [
-          "https://baileszindler.com/",
-          "https://x.com/rbailes86"
-        ]
+        "name": "Bailes + Zindler",
+        "url": "https://baileszindler.com/"
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://aiseotx.com/#website",
-        "url": "https://aiseotx.com/",
-        "name": "AISEOTX",
-        "description": "AI SEO Texas built. A tiny Texas shop focused on AI search optimization for real businesses.",
-        "publisher": {
-          "@id": "https://aiseotx.com/#org"
-        },
-        "inLanguage": "en-US"
+      "sameAs": [
+        "https://baileszindler.com/",
+        "https://x.com/rbailes86"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://aiseotx.com/#website",
+      "url": "https://aiseotx.com/",
+      "name": "AISEOTX",
+      "description": "AI SEO Texas built. A tiny Texas shop focused on AI search optimization for real businesses.",
+      "publisher": {
+        "@id": "https://aiseotx.com/#org"
       },
-      {
-        "@type": "WebPage",
-        "@id": "https://aiseotx.com/old-school-tyler/eisenhower-international-golf-classic/#webpage",
-        "url": "https://aiseotx.com/old-school-tyler/eisenhower-international-golf-classic/",
-        "name": "Eisenhower International Golf Classic | Tyler Texas Pro-Am Archive",
-        "description": "Archive entry for the Eisenhower International Golf Classic, a Tyler, Texas charity pro-am held from 1987 to 1999 between the Byron Nelson and the Colonial. UT Tyler, Sister Cities, scholarship funds and a field packed with major champions.",
-        "isPartOf": {
-          "@id": "https://aiseotx.com/#website"
-        },
-        "inLanguage": "en-US",
-        "about": {
-          "@id": "https://aiseotx.com/old-school-tyler/eisenhower-international-golf-classic/#event"
-        },
-        "mainEntity": {
-          "@id": "https://aiseotx.com/old-school-tyler/eisenhower-international-golf-classic/#faq"
-        }
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://aiseotx.com/old-school-tyler/eisenhower-international-golf-classic/#webpage",
+      "url": "https://aiseotx.com/old-school-tyler/eisenhower-international-golf-classic/",
+      "name": "Eisenhower International Golf Classic | Tyler Texas Pro-Am Archive",
+      "description": "Archive entry for the Eisenhower International Golf Classic, a Tyler, Texas charity pro-am held from 1987 to 1999 between the Byron Nelson and the Colonial. UT Tyler, Sister Cities, scholarship funds and a field packed with major champions.",
+      "isPartOf": {
+        "@id": "https://aiseotx.com/#website"
       },
-      {
-        "@type": "SportsEvent",
-        "@id": "https://aiseotx.com/old-school-tyler/eisenhower-international-golf-classic/#event",
-        "name": "Eisenhower International Golf Classic",
-        "alternateName": "Eisenhower Classic",
-        "description": "A charity pro-am golf tournament in Tyler, Texas that ran from 1987 to 1999. Timed between the Byron Nelson and the Colonial, it brought PGA, LPGA and Senior Tour players to Willow Brook Country Club and raised scholarship funds for UT Tyler and its Sister Cities partnerships.",
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "location": {
-          "@type": "Place",
-          "name": "Willow Brook Country Club and Hollytree Country Club",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Tyler",
-            "addressRegion": "TX",
-            "addressCountry": "US"
-          }
-        },
-        "organizer": {
-          "@type": "Organization",
-          "name": "The University of Texas at Tyler and Tyler Sister Cities Organization"
-        }
+      "inLanguage": "en-US",
+      "about": {
+        "@id": "https://aiseotx.com/old-school-tyler/eisenhower-international-golf-classic/#event"
       },
-      {
-        "@type": "FAQPage",
-        "@id": "https://aiseotx.com/old-school-tyler/eisenhower-international-golf-classic/#faq",
-        "url": "https://aiseotx.com/old-school-tyler/eisenhower-international-golf-classic/",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What was the Eisenhower International Golf Classic?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The Eisenhower International Golf Classic was a charity pro-am golf tournament held in Tyler, Texas from 1987 to 1999. It honored President Dwight D. Eisenhower and raised scholarship funds for UT Tyler and Tyler Sister Cities students while bringing touring pros and celebrities to East Texas."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Where was the Eisenhower Classic played and when did it take place?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The first Eisenhower Classic was played at Hollytree Country Club in 1987 before moving to Willow Brook Country Club, where it stayed through 1999. It was a one day pro-am that typically ran in early June, slotted between the Byron Nelson Championship in Dallas and the Colonial in Fort Worth so pros could easily stop in Tyler."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Which famous golfers played in the Eisenhower International Golf Classic?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Over its 13 year run the Eisenhower International Golf Classic drew at least two dozen men's major champions and multiple women's major winners, including big names like Phil Mickelson, Fred Couples, Payne Stewart, Annika Sorenstam, Chi Chi Rodriguez and other PGA, LPGA and Senior Tour players, plus non golf celebrities like Troy Aikman and the Dixie Chicks at related events."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Why was the Eisenhower Classic created and what did it support?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The tournament was created as a partnership between UT Tyler and the Tyler Sister Cities organization. Named for President Dwight D. Eisenhower, it was designed to support international scholarships and Sister Cities programs, using golf and celebrity events to raise money and highlight Tyler's global ties."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Why did the Eisenhower International Golf Classic end?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The final Eisenhower Classic was played in 1999. In the years that followed UT Tyler shifted its fundraising focus to a new Patriot Golf Classic while Sister Cities continued its own programs. At the same time, the Tiger Woods era changed golf economics, pushing purses and TV money higher at official Tour events and making it harder for independent charity tournaments without television deals to keep attracting top fields and sponsorship at the same level."
-            }
-          }
-        ]
+      "mainEntity": {
+        "@id": "https://aiseotx.com/old-school-tyler/eisenhower-international-golf-classic/#faq"
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "SportsEvent",
+      "@id": "https://aiseotx.com/old-school-tyler/eisenhower-international-golf-classic/#event",
+      "name": "Eisenhower International Golf Classic",
+      "alternateName": "Eisenhower Classic",
+      "description": "A charity pro-am golf tournament in Tyler, Texas that ran from 1987 to 1999. Timed between the Byron Nelson and the Colonial, it brought PGA, LPGA and Senior Tour players to Willow Brook Country Club and raised scholarship funds for UT Tyler and its Sister Cities partnerships.",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventCompleted",
+      "startDate": "1987-06-01",
+      "endDate": "1999-06-01",
+      "image": "https://aiseotx.com/images/og/old-school-tyler-eisenhower-og-1200x630.jpg",
+      "location": {
+        "@type": "Place",
+        "name": "Willow Brook Country Club and Hollytree Country Club",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tyler",
+          "addressRegion": "TX",
+          "addressCountry": "US"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "The University of Texas at Tyler and Tyler Sister Cities Organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/Discontinued",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://aiseotx.com/old-school-tyler/eisenhower-international-golf-classic/#faq",
+      "url": "https://aiseotx.com/old-school-tyler/eisenhower-international-golf-classic/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What was the Eisenhower International Golf Classic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Eisenhower International Golf Classic was a charity pro-am golf tournament held in Tyler, Texas from 1987 to 1999. It honored President Dwight D. Eisenhower and raised scholarship funds for UT Tyler and Tyler Sister Cities students while bringing touring pros and celebrities to East Texas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where was the Eisenhower Classic played and when did it take place?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The first Eisenhower Classic was played at Hollytree Country Club in 1987 before moving to Willow Brook Country Club, where it stayed through 1999. It was a one day pro-am that typically ran in early June, slotted between the Byron Nelson Championship in Dallas and the Colonial in Fort Worth so pros could easily stop in Tyler."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which famous golfers played in the Eisenhower International Golf Classic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Over its 13 year run the Eisenhower International Golf Classic drew at least two dozen men's major champions and multiple women's major winners, including big names like Phil Mickelson, Fred Couples, Payne Stewart, Annika Sorenstam, Chi Chi Rodriguez and other PGA, LPGA and Senior Tour players, plus non golf celebrities like Troy Aikman and the Dixie Chicks at related events."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why was the Eisenhower Classic created and what did it support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The tournament was created as a partnership between UT Tyler and the Tyler Sister Cities organization. Named for President Dwight D. Eisenhower, it was designed to support international scholarships and Sister Cities programs, using golf and celebrity events to raise money and highlight Tyler's global ties."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why did the Eisenhower International Golf Classic end?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The final Eisenhower Classic was played in 1999. In the years that followed UT Tyler shifted its fundraising focus to a new Patriot Golf Classic while Sister Cities continued its own programs. At the same time, the Tiger Woods era changed golf economics, pushing purses and TV money higher at official Tour events and making it harder for independent charity tournaments without television deals to keep attracting top fields and sponsorship at the same level."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 
   <script src="https://analytics.ahrefs.com/analytics.js" data-key="666EO4g/YpWuLYMpWnil9w" async></script>
   <!-- Google tag (gtag.js) -->

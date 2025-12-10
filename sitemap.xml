@@ -15,4 +15,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Old School Tyler hub -->
+  <url>
+    <loc>https://aiseotx.com/old-school-tyler/</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Eisenhower International Golf Classic archive entry -->
+  <url>
+    <loc>https://aiseotx.com/old-school-tyler/eisenhower-international-golf-classic/</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Tyler WildCatters archive entry -->
+  <url>
+    <loc>https://aiseotx.com/old-school-tyler/tyler-wildcatters/</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

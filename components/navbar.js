@@ -99,27 +99,43 @@ class CustomNavbar extends HTMLElement {
         
         .mobile-menu-toggle {
           display: none;
-          background: none;
-          border: none;
+          background: #ED1C24;
+          border: 2px solid #FFFFFF;
           color: #ffffff;
           cursor: pointer;
+          padding: 0.6rem 0.8rem;
+          -webkit-tap-highlight-color: transparent;
+          touch-action: manipulation;
         }
 
+        .mobile-menu-toggle:active {
+          background: #FFFFFF;
+        }
+
+        .mobile-menu-toggle:active svg {
+          stroke: #ED1C24;
+        }
+
+        .mobile-menu-toggle svg,
         .mobile-menu-toggle i {
           width: 24px;
           height: 24px;
+          stroke: #FFFFFF;
+          display: block;
         }
         
         .mobile-menu {
           display: none;
-          position: absolute;
-          top: 100%;
+          position: fixed;
+          top: 74px;
           left: 0;
           right: 0;
+          bottom: 0;
           background: #000000;
-          border-bottom: 4px solid #ED1C24;
-          padding: 1.75rem 2rem 2.5rem;
-          text-align: center;
+          border-top: 4px solid #ED1C24;
+          padding: 2rem;
+          overflow-y: auto;
+          z-index: 999;
         }
         
         .mobile-menu.active {
@@ -136,18 +152,32 @@ class CustomNavbar extends HTMLElement {
           color: #ffffff;
           text-decoration: none;
           font-weight: 700;
-          font-size: 0.95rem;
+          font-size: 1.1rem;
           text-transform: uppercase;
           letter-spacing: 0.14em;
+          padding: 1rem;
+          border: 3px solid #ED1C24;
+          text-align: center;
+          background: #000000;
+          transition: all 0.2s ease;
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        .mobile-link:active {
+          background: #ED1C24;
+          color: #000000;
         }
 
         .mobile-link-cta {
-          display: inline-block;
-          margin-top: 0.5rem;
           background: #ED1C24;
           color: #000000;
-          padding: 0.6rem 1.2rem;
-          border: 2px solid #FFFFFF;
+          border-color: #FFFFFF;
+          margin-top: 1rem;
+        }
+
+        .mobile-link-cta:active {
+          background: #000000;
+          color: #ED1C24;
         }
         
         @media (max-width: 768px) {
@@ -157,6 +187,12 @@ class CustomNavbar extends HTMLElement {
           
           .mobile-menu-toggle {
             display: block;
+          }
+        }
+
+        @media (min-width: 769px) {
+          .mobile-menu {
+            display: none !important;
           }
         }
       </style>
@@ -201,9 +237,9 @@ class CustomNavbar extends HTMLElement {
           </a>
           
           <div class="nav-links">
-            <a href="https://aiseotx.com/#capsules" class="nav-link">Capsules</a>
-            <a href="https://aiseotx.com/#proof" class="nav-link">Proof</a>
-            <a href="https://aiseotx.com/#aiseo" class="nav-link">What is AISEO</a>
+            <a href="/#capsules" class="nav-link">Capsules</a>
+            <a href="/#proof" class="nav-link">Proof</a>
+            <a href="/#aiseo" class="nav-link">What is AISEO</a>
             <a href="/old-school-tyler" class="nav-link">Old School Tyler</a>      
             <span class="status-badge">System Active</span>
             <a href="https://baileszindler.com/contact" class="nav-link nav-cta" target="_blank" rel="noopener noreferrer">
@@ -211,16 +247,16 @@ class CustomNavbar extends HTMLElement {
             </a>
           </div>
           
-          <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+          <button class="mobile-menu-toggle" aria-label="Toggle navigation" type="button">
             <i data-feather="menu"></i>
           </button>
         </div>
         
         <div class="mobile-menu">
           <div class="mobile-menu-links">
-            <a href="https://aiseotx.com/#capsules" class="mobile-link">Capsules</a>
-            <a href="https://aiseotx.com/#proof" class="mobile-link">Proof</a>
-            <a href="https://aiseotx.com/#aiseo" class="mobile-link">What is AISEO</a>
+            <a href="/#capsules" class="mobile-link">Capsules</a>
+            <a href="/#proof" class="mobile-link">Proof</a>
+            <a href="/#aiseo" class="mobile-link">What is AISEO</a>
             <a href="/old-school-tyler" class="mobile-link">Old School Tyler</a>      
             <a href="https://baileszindler.com/contact" class="mobile-link mobile-link-cta" target="_blank" rel="noopener noreferrer">
               Access System
@@ -230,13 +266,29 @@ class CustomNavbar extends HTMLElement {
       </nav>
     `;
 
+    this.setupEventListeners();
+  }
+
+  setupEventListeners() {
     const toggle = this.shadowRoot.querySelector('.mobile-menu-toggle');
     const menu = this.shadowRoot.querySelector('.mobile-menu');
+    const menuLinks = this.shadowRoot.querySelectorAll('.mobile-link');
 
     if (toggle && menu) {
-      toggle.addEventListener('click', () => {
+      // Handle both click and touch events
+      const toggleMenu = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         menu.classList.toggle('active');
         
+        // Prevent body scroll when menu is open
+        if (menu.classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+        
+        // Change icon
         const icon = toggle.querySelector('i');
         if (icon) {
           if (menu.classList.contains('active')) {
@@ -246,6 +298,46 @@ class CustomNavbar extends HTMLElement {
           }
           if (window.feather) {
             window.feather.replace();
+          }
+        }
+      };
+
+      // Add both click and touchend listeners
+      toggle.addEventListener('click', toggleMenu);
+      toggle.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        toggleMenu(e);
+      });
+
+      // Close menu when clicking a link
+      menuLinks.forEach(link => {
+        const closeMenu = () => {
+          menu.classList.remove('active');
+          document.body.style.overflow = '';
+          const icon = toggle.querySelector('i');
+          if (icon) {
+            icon.setAttribute('data-feather', 'menu');
+            if (window.feather) {
+              window.feather.replace();
+            }
+          }
+        };
+
+        link.addEventListener('click', closeMenu);
+        link.addEventListener('touchend', closeMenu);
+      });
+
+      // Close menu when tapping outside
+      document.addEventListener('touchstart', (e) => {
+        if (!this.contains(e.target) && menu.classList.contains('active')) {
+          menu.classList.remove('active');
+          document.body.style.overflow = '';
+          const icon = toggle.querySelector('i');
+          if (icon) {
+            icon.setAttribute('data-feather', 'menu');
+            if (window.feather) {
+              window.feather.replace();
+            }
           }
         }
       });

@@ -1,5 +1,4 @@
 // Global script for AI SEO DROPZONE TX
-
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize feather icons
     if (typeof feather !== 'undefined') {
@@ -73,13 +72,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     addStreetTextEffects();
 
-    // Mobile menu toggle for navbar component
-    document.addEventListener('click', function(e) {
-        if (e.target.closest('.mobile-menu-toggle')) {
-            const navbar = e.target.closest('custom-navbar');
-            if (navbar) {
-                navbar.shadowRoot.querySelector('.mobile-menu').classList.toggle('hidden');
-        }
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Skip if it's just "#"
+            if (href === '#') return;
+            
+            e.preventDefault();
+            const target = document.querySelector(href);
+            
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
     });
 
     console.log('🤖 AI SEO DROPZONE TX - SYSTEM ACTIVE');

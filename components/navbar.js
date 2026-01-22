@@ -22,25 +22,42 @@ class CustomNavbar extends HTMLElement {
           align-items: center;
         }
         
-        .logo {
-          color: #fff;
-          font-size: 1.5rem;
-          font-weight: bold;
+        .nav-logo {
+          display: inline-flex;
+          align-items: center;
           text-decoration: none;
-          background: #ED1C24;
-          padding: 0.5rem 1rem;
+        }
+        
+        .nav-logo-svg {
+          display: block;
+          height: 42px;
+          width: auto;
+        }
+        
+        @media (min-width: 1024px) {
+          .nav-logo-svg {
+            height: 50px;
+          }
         }
         
         .desktop-nav {
           display: flex;
           gap: 2rem;
+          align-items: center;
         }
         
         .desktop-nav a {
           color: #fff;
           text-decoration: none;
           font-weight: bold;
-          font-size: 0.9rem;
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          transition: color 0.3s;
+        }
+        
+        .desktop-nav a:hover {
+          color: #ED1C24;
         }
         
         .hamburger {
@@ -96,10 +113,18 @@ class CustomNavbar extends HTMLElement {
           color: #fff;
           text-decoration: none;
           font-weight: bold;
-          font-size: 1.5rem;
+          font-size: 1.3rem;
           padding: 1rem;
           border: 3px solid #ED1C24;
           text-align: center;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          transition: all 0.2s;
+        }
+        
+        .mobile-nav a:active {
+          background: #ED1C24;
+          color: #000;
         }
         
         @media (max-width: 768px) {
@@ -159,7 +184,7 @@ class CustomNavbar extends HTMLElement {
             <a href="https://baileszindler.com/contact">CONTACT</a>
           </div>
           
-          <button class="hamburger">
+          <button class="hamburger" aria-label="Toggle menu">
             <span></span>
             <span></span>
             <span></span>

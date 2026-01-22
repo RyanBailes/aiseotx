@@ -24,18 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 
-    // Add machine camo pattern to random elements
-    function addMachineCamo() {
-        const elements = document.querySelectorAll('.border-4');
-        elements.forEach(el => {
-            if (Math.random() > 0.7) {
-                el.classList.add('machine-camo-pattern');
-            }
-        });
-    }
-
-    // Initialize machine camo
-    addMachineCamo();
+    // REMOVED: addMachineCamo function - this was causing the pattern to appear in capsules
+    // The camo pattern should only be in specific background sections via HTML, not added via JS
 
     // Add hypebeast cursor effect
     document.addEventListener('mousemove', function(e) {

@@ -44,7 +44,7 @@ body {
     overflow-x: hidden;
 }
 
-/* MACHINE CAMO BACKGROUND */
+/* MACHINE CAMO BACKGROUND - Only for background sections */
 .machine-camo-pattern {
     background-image: 
         radial-gradient(circle at 25% 25%, #ED1C24 2px, transparent 2px),
@@ -52,6 +52,35 @@ body {
         linear-gradient(45deg, transparent 49%, #ffffff 49%, #ffffff 51%, transparent 51%);
     background-size: 50px 50px, 50px 50px, 100px 100px;
     animation: camoMove 20s linear infinite;
+}
+
+/* Prevent camo pattern from appearing on content elements */
+.border-4,
+.group,
+section > .container,
+section > .container > *,
+#capsules .grid > div,
+#proof .grid > div {
+    background-image: none !important;
+    animation: none !important;
+}
+
+/* Ensure capsules have solid black background */
+#capsules .border-4 {
+    background: #000000 !important;
+    background-image: none !important;
+}
+
+/* Ensure proof section boxes have no pattern */
+#proof .border-4 {
+    background: transparent !important;
+    background-image: none !important;
+}
+
+/* Ensure AISEO definition boxes have no pattern */
+#aiseo .border-4 {
+    background: #000000 !important;
+    background-image: none !important;
 }
 
 @keyframes camoMove {

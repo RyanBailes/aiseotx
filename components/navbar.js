@@ -116,8 +116,7 @@ class CustomNavbar extends HTMLElement {
           stroke: #ED1C24;
         }
 
-        .mobile-menu-toggle svg,
-        .mobile-menu-toggle i {
+        .mobile-menu-toggle svg {
           width: 24px;
           height: 24px;
           stroke: #FFFFFF;
@@ -248,7 +247,7 @@ class CustomNavbar extends HTMLElement {
           </div>
           
           <button class="mobile-menu-toggle" aria-label="Toggle navigation" type="button">
-            <i data-feather="menu"></i>
+            <i data-feather="menu" aria-hidden="true"></i>
           </button>
         </div>
         
@@ -274,6 +273,21 @@ class CustomNavbar extends HTMLElement {
     const menu = this.shadowRoot.querySelector('.mobile-menu');
     const menuLinks = this.shadowRoot.querySelectorAll('.mobile-link');
 
+    // Update feather icons
+    const updateIcons = () => {
+      if (window.feather) {
+        window.feather.replace();
+      }
+    };
+
+    // Initial icon update
+    updateIcons();
+    
+    // If feather isn't loaded yet, wait for it
+    if (!window.feather) {
+      window.addEventListener('load', updateIcons, { once: true });
+    }
+
     if (toggle && menu) {
       // Handle both click and touch events
       const toggleMenu = (e) => {
@@ -291,14 +305,8 @@ class CustomNavbar extends HTMLElement {
         // Change icon
         const icon = toggle.querySelector('i');
         if (icon) {
-          if (menu.classList.contains('active')) {
-            icon.setAttribute('data-feather', 'x');
-          } else {
-            icon.setAttribute('data-feather', 'menu');
-          }
-          if (window.feather) {
-            window.feather.replace();
-          }
+          icon.setAttribute('data-feather', menu.classList.contains('active') ? 'x' : 'menu');
+          updateIcons();
         }
       };
 
@@ -317,9 +325,7 @@ class CustomNavbar extends HTMLElement {
           const icon = toggle.querySelector('i');
           if (icon) {
             icon.setAttribute('data-feather', 'menu');
-            if (window.feather) {
-              window.feather.replace();
-            }
+            updateIcons();
           }
         };
 
@@ -335,9 +341,7 @@ class CustomNavbar extends HTMLElement {
           const icon = toggle.querySelector('i');
           if (icon) {
             icon.setAttribute('data-feather', 'menu');
-            if (window.feather) {
-              window.feather.replace();
-            }
+            updateIcons();
           }
         }
       });

@@ -179,7 +179,7 @@ class CustomNavbar extends HTMLElement {
           <div class="desktop-nav">
             <a href="/#capsules">CAPSULES</a>
             <a href="/#proof">PROOF</a>
-            <a href="/#aiseo">WHAT IS AISEO</a>
+            <a href="/what-is-aiseo">WHAT IS AISEO</a>
             <a href="/old-school-tyler">OLD SCHOOL TYLER</a>
             <a href="https://baileszindler.com/contact">CONTACT</a>
           </div>
@@ -194,7 +194,7 @@ class CustomNavbar extends HTMLElement {
         <div class="mobile-nav">
           <a href="/#capsules">CAPSULES</a>
           <a href="/#proof">PROOF</a>
-          <a href="/#aiseo">WHAT IS AISEO</a>
+          <a href="/what-is-aiseo">WHAT IS AISEO</a>
           <a href="/old-school-tyler">OLD SCHOOL TYLER</a>
           <a href="https://baileszindler.com/contact">CONTACT</a>
         </div>

@@ -1,25 +1,83 @@
 # robots.txt for https://aiseotx.com/
+# Goal: maximize visibility in classic search + AI answers, while keeping obvious junk paths out of indexes.
 
+# 1) Default rules for all crawlers
 User-agent: *
 Allow: /
 
-# Explicitly allow major AI / LLM crawlers
+# Keep common probe / non-public endpoints out of indexes (robots.txt is not security)
+Disallow: /.env
+Disallow: /.git/
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /xmlrpc.php
+Disallow: /actuator/
+Disallow: /swagger
+Disallow: /webjars/
+Disallow: /v2/api-docs
+Disallow: /v3/api-docs
+Disallow: /telescope/
+Disallow: /ecp/
+Disallow: /server-status
+Disallow: /backup
+Disallow: /data.tar
+Disallow: /database
+Disallow: /dump.tar
+Disallow: /debug
+Disallow: /app.tar
+Disallow: /info.php
+Disallow: /login.action
+
+# 2) Explicit AI crawlers (same rules as above, listed for tooling/audits)
+# OpenAI
 User-agent: GPTBot
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+# Anthropic
 User-agent: ClaudeBot
-Allow: /
-
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+# Perplexity
 User-agent: PerplexityBot
-Allow: /
-
+User-agent: Perplexity-User
+# Common Crawl
+User-agent: CCBot
+# Google AI controls
 User-agent: Google-Extended
-Allow: /
+# Apple AI controls
+User-agent: Applebot
+User-agent: Applebot-Extended
+# Amazon / Rufus-style agents
+User-agent: Amazonbot
+User-agent: Amzn-SearchBot
+User-agent: Amzn-User
+# Meta AI agents (often seen as lowercase in logs)
+User-agent: meta-externalagent
+User-agent: meta-externalfetcher
 
-User-agent: FacebookBot
 Allow: /
+Disallow: /.env
+Disallow: /.git/
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /xmlrpc.php
+Disallow: /actuator/
+Disallow: /swagger
+Disallow: /webjars/
+Disallow: /v2/api-docs
+Disallow: /v3/api-docs
+Disallow: /telescope/
+Disallow: /ecp/
+Disallow: /server-status
+Disallow: /backup
+Disallow: /data.tar
+Disallow: /database
+Disallow: /dump.tar
+Disallow: /debug
+Disallow: /app.tar
+Disallow: /info.php
+Disallow: /login.action
 
 Sitemap: https://aiseotx.com/sitemap.xml

@@ -25,6 +25,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Received a Letter About Your Domain -->
+  <url>
+    <loc>https://aiseotx.com/received-a-letter-about-your-domain</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- AISEO Radar -->
   <url>
     <loc>https://aiseotx.com/radar</loc>

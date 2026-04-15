@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Primary SEO -->
-<title>AISEOTX — AI SEO Texas Built</title>
+<title>AISEOTX - AI SEO Texas Built</title>
 <meta name="description" content="AISEOTX is a Texas built AI search optimization shop that helps real businesses show up in Perplexity, Copilot, AI Overviews and DeepSeek. Machine first structure, schema and entity clarity for Texas operators.">
 <link rel="canonical" href="https://aiseotx.com">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
@@ -13,7 +13,7 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AISEOTX">
-<meta property="og:title" content="AISEOTX — AI SEO Texas Built">
+<meta property="og:title" content="AISEOTX - AI SEO Texas Built">
 <meta property="og:description" content="A Texas built AI search optimization shop helping real businesses show up in Perplexity, Copilot, AI Overviews and DeepSeek. Machine first structure, schema and entity clarity.">
 <meta property="og:url" content="https://aiseotx.com/">
 <meta property="og:image" content="https://aiseotx.com/images/og/aiseotx-og-1200x630.jpg">
@@ -23,7 +23,7 @@
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AISEOTX — AI SEO Texas Built">
+<meta name="twitter:title" content="AISEOTX - AI SEO Texas Built">
 <meta name="twitter:description" content="Texas built AI search optimization for real businesses. Machine first structure, schema and entity clarity for Perplexity, Copilot, AI Overviews and DeepSeek.">
 <meta name="twitter:image" content="https://aiseotx.com/images/og/aiseotx-og-1200x630.jpg">
 <meta name="twitter:creator" content="@rbailes86">
@@ -34,16 +34,16 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
 <link rel="manifest" href="/static/site.webmanifest">
+
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-858429223">
-</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-858429223"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'AW-858429223');
 </script>
+
 <!-- JSON-LD Schema -->
 <script type="application/ld+json">
 {
@@ -101,7 +101,7 @@
       "@type": "WebPage",
       "@id": "https://aiseotx.com/#webpage",
       "url": "https://aiseotx.com/",
-      "name": "AISEOTX — AI SEO Texas Built",
+      "name": "AISEOTX - AI SEO Texas Built",
       "description": "AISEOTX is a Texas built AI search optimization shop that helps real businesses show up in Perplexity, Copilot, AI Overviews and DeepSeek. Machine first structure, schema and entity clarity for Texas operators.",
       "isPartOf": { "@id": "https://aiseotx.com/#website" },
       "about": { "@id": "https://aiseotx.com/#org" },
@@ -129,158 +129,383 @@
 
 <link rel="stylesheet" href="css/style.css">
 <style>
-/* ── Hero (home only) ─────────────────────────────────── */
+/* - Hero (home only) ----------------------------------- */
 #hero-section { position: relative; height: 560vh; }
 
 .hero-sticky {
-  position: sticky; top: 0;
-  height: 100vh; width: 100%;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
   overflow: hidden;
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .hero-bg {
-  position: absolute; inset: 0; z-index: 0;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   background:
     radial-gradient(ellipse 90% 60% at 20% 80%, rgba(237,28,36,.05) 0%, transparent 55%),
     radial-gradient(ellipse 70% 50% at 80% 20%, rgba(237,28,36,.03) 0%, transparent 55%),
     #050505;
 }
+
 .hero-grid {
-  position: absolute; inset: 0; z-index: 1;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
   background-image:
     linear-gradient(rgba(255,255,255,.016) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,.016) 1px, transparent 1px);
   background-size: 72px 72px;
   mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 20%, transparent 100%);
 }
+
 .hero-scan {
-  position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
   background: repeating-linear-gradient(to bottom, transparent 0, transparent 3px, rgba(0,0,0,.07) 3px, rgba(0,0,0,.07) 4px);
   opacity: .3;
 }
+
 .hero-orb {
-  position: absolute; width: 700px; height: 500px;
+  position: absolute;
+  width: 700px;
+  height: 500px;
   background: radial-gradient(ellipse, rgba(237,28,36,.08) 0%, transparent 65%);
-  border-radius: 50%; top: 55%; left: 50%; transform: translate(-50%,-50%);
-  z-index: 1; animation: orbPulse 8s ease-in-out infinite;
-}
-@keyframes orbPulse {
-  0%,100% { opacity:.7; transform:translate(-50%,-50%) scale(1); }
-  50%      { opacity:1;  transform:translate(-50%,-50%) scale(1.08); }
+  border-radius: 50%;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+  animation: orbPulse 8s ease-in-out infinite;
 }
 
-/* ── Scroll scrub panels ─────────────────────────────── */
+@keyframes orbPulse {
+  0%,100% { opacity:.7; transform:translate(-50%,-50%) scale(1); }
+  50% { opacity:1; transform:translate(-50%,-50%) scale(1.08); }
+}
+
+/* - Scroll scrub panels -------------------------------- */
 .scrub-panel {
-  position: absolute; inset: 0; z-index: 10;
-  display: flex; align-items: center; justify-content: center;
-  /* start invisible — JS controls everything via inline style */
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
   will-change: opacity, transform;
   pointer-events: none;
 }
 
-/* ── Hero panel 0 content ────────────────────────────── */
+/* - Hero panel 0 content ------------------------------- */
 .hero-content {
-  text-align: center; padding: 0 40px;
-  max-width: 1100px; width: 100%;
+  text-align: center;
+  padding: 0 40px;
+  max-width: 1100px;
+  width: 100%;
 }
 
-/* Eyebrow — animates in via CSS keyframe on load */
 .hero-eyebrow {
   font-family: 'AISEO Grotesk', 'Courier New', monospace;
-  font-size: .66rem; letter-spacing: .3em; text-transform: uppercase;
-  color: var(--red); margin-bottom: 30px;
-  display: flex; align-items: center; justify-content: center; gap: 14px;
-  opacity: 0; animation: fadeUp .7s ease .1s forwards;
+  font-size: .66rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  opacity: 0;
+  animation: fadeUp .7s ease .1s forwards;
 }
-.hero-eyebrow .ln { width: 28px; height: 1px; background: var(--red); opacity: .5; }
 
-/* Headline words — each line clips and slides up */
+.hero-eyebrow .ln {
+  width: 28px;
+  height: 1px;
+  background: var(--red);
+  opacity: .5;
+}
+
 .hero-headline {
   font-family: 'AISEO Cond', sans-serif;
   font-size: clamp(72px, 13.5vw, 192px);
-  line-height: .86; letter-spacing: -.01em;
+  line-height: .86;
+  letter-spacing: -.01em;
 }
-.lw { overflow: hidden; display: block; }
+
+.lw {
+  overflow: hidden;
+  display: block;
+}
+
 .hw {
   display: inline-block;
-  opacity: 0; transform: translateY(100%);
+  opacity: 0;
+  transform: translateY(100%);
   animation: slideUp .8s cubic-bezier(.16,1,.3,1) forwards;
 }
-.hw.red   { color: var(--red); }
-.hw.ghost { -webkit-text-stroke: 1.5px rgba(242,237,230,.3); color: transparent; }
 
-/* Stagger each word */
+.hw.red { color: var(--red); }
+.hw.ghost {
+  -webkit-text-stroke: 1.5px rgba(242,237,230,.3);
+  color: transparent;
+}
+
 #hw1 { animation-delay: .15s; }
 #hw2 { animation-delay: .25s; }
 #hw3 { animation-delay: .35s; }
 
 .hero-sub {
-  font-size: 1rem; font-weight: 300; color: var(--dim);
-  max-width: 520px; margin: 30px auto 0; line-height: 1.8;
-  opacity: 0; animation: fadeUp .7s ease .55s forwards;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--dim);
+  max-width: 520px;
+  margin: 30px auto 0;
+  line-height: 1.8;
+  opacity: 0;
+  animation: fadeUp .7s ease .55s forwards;
 }
+
 .hero-tags {
   margin-top: 36px;
-  display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;
-  opacity: 0; animation: fadeUp .7s ease .7s forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp .7s ease .7s forwards;
 }
+
 .htag {
-  font-family: 'AISEO Grotesk', 'Courier New', monospace; font-size: .56rem;
-  letter-spacing: .14em; text-transform: uppercase;
-  color: var(--dim2); border: 1px solid rgba(255,255,255,.08); padding: 7px 13px;
+  font-family: 'AISEO Grotesk', 'Courier New', monospace;
+  font-size: .56rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--dim2);
+  border: 1px solid rgba(255,255,255,.08);
+  padding: 7px 13px;
 }
 
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(100%); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* ── Scrub text panels (1-4) ─────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* - Scrub text panels (1-4) ---------------------------- */
 .scrub-text {
   font-family: 'AISEO Cond', sans-serif;
   font-size: clamp(56px, 9.5vw, 136px);
-  text-align: center; line-height: .88; letter-spacing: -.01em;
-  padding: 0 40px; max-width: 1000px;
-}
-.scrub-text em { font-style: normal; color: var(--red); display: block; }
-.scrub-text .sub {
-  display: block; font-family: 'AISEO Grotesk', sans-serif;
-  font-size: clamp(13px, 1.1vw, 18px); font-weight: 300;
-  letter-spacing: .06em; color: var(--dim);
-  margin-top: 22px; line-height: 1.7;
-  max-width: 580px; margin-left: auto; margin-right: auto;
+  text-align: center;
+  line-height: .88;
+  letter-spacing: -.01em;
+  padding: 0 40px;
+  max-width: 1000px;
 }
 
-/* ── Scroll hint ─────────────────────────────────────── */
-.hero-scroll-hint {
-  position: absolute; bottom: 34px; left: 50%; transform: translateX(-50%);
-  display: flex; flex-direction: column; align-items: center; gap: 10px;
-  opacity: 0; animation: fadeUpHint 1s ease 1.1s forwards;
+.scrub-text em {
+  font-style: normal;
+  color: var(--red);
+  display: block;
 }
+
+.scrub-text .sub {
+  display: block;
+  font-family: 'AISEO Grotesk', sans-serif;
+  font-size: clamp(13px, 1.1vw, 18px);
+  font-weight: 300;
+  letter-spacing: .06em;
+  color: var(--dim);
+  margin-top: 22px;
+  line-height: 1.7;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* - Scroll hint ---------------------------------------- */
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 34px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  animation: fadeUpHint 1s ease 1.1s forwards;
+}
+
 @keyframes fadeUpHint {
   from { opacity: 0; transform: translate(-50%, 8px); }
-  to   { opacity: 1; transform: translate(-50%, 0); }
+  to { opacity: 1; transform: translate(-50%, 0); }
 }
+
 .hero-scroll-hint span {
-  font-family: 'AISEO Grotesk', 'Courier New', monospace; font-size: .57rem;
-  letter-spacing: .2em; text-transform: uppercase; color: var(--dim2);
+  font-family: 'AISEO Grotesk', 'Courier New', monospace;
+  font-size: .57rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--dim2);
 }
+
 .scroll-line {
-  width: 1px; height: 46px;
+  width: 1px;
+  height: 46px;
   background: linear-gradient(to bottom, var(--red), transparent);
   animation: scanDrop 2s ease-in-out 1.5s infinite;
   opacity: 0;
 }
+
 @keyframes scanDrop {
   0%   { opacity: 1; transform: scaleY(0); transform-origin: top; }
   50%  { opacity: 1; transform: scaleY(1); transform-origin: top; }
   51%  { transform-origin: bottom; }
   100% { opacity: 0; transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* - Deliverables block --------------------------------- */
+.deliverables-shell {
+  margin-top: 1px;
+  background: var(--border);
+}
+
+.deliverables-wrap {
+  background: var(--off-black);
+  padding: 44px 40px;
+  border: 1px solid var(--border);
+}
+
+.deliverables-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(340px, 1.25fr);
+  gap: 56px;
+  align-items: start;
+}
+
+.deliverables-copy {
+  max-width: 420px;
+}
+
+.deliverables-title {
+  font-family: 'AISEO Cond', sans-serif;
+  font-size: clamp(2rem, 3vw, 3.25rem);
+  letter-spacing: .04em;
+  color: var(--white);
+  margin: 0 0 20px;
+  line-height: .95;
+}
+
+.deliverables-text {
+  font-size: .95rem;
+  color: var(--dim);
+  line-height: 1.85;
+  margin: 0;
+}
+
+.deliverables-list {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0 0;
+  display: grid;
+  gap: 14px;
+}
+
+.deliverables-item {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 14px 0;
+  border-top: 1px solid rgba(255,255,255,.08);
+  font-size: .95rem;
+  color: var(--dim);
+  line-height: 1.7;
+}
+
+.deliverables-item:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.deliverables-arrow {
+  color: var(--red);
+  opacity: .75;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .deliverables-wrap {
+    padding: 32px 24px;
+  }
+
+  .deliverables-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .deliverables-copy {
+    max-width: none;
+  }
+
+  .deliverables-title {
+    font-size: clamp(1.8rem, 9vw, 2.6rem);
+    margin-bottom: 16px;
+  }
+
+  .deliverables-text {
+    font-size: .95rem;
+    line-height: 1.8;
+  }
+
+  .deliverables-list {
+    gap: 0;
+    padding-top: 0;
+  }
+
+  .deliverables-item {
+    grid-template-columns: 16px 1fr;
+    padding: 14px 14px;
+    font-size: .95rem;
+    line-height: 1.65;
+    background: rgba(255,255,255,.02);
+    border: 1px solid rgba(255,255,255,.06);
+    margin-bottom: 10px;
+  }
+
+  .deliverables-item:first-child {
+    padding-top: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .deliverables-wrap {
+    padding: 26px 20px;
+  }
+
+  .deliverables-title {
+    font-size: 2rem;
+    line-height: .96;
+  }
+
+  .deliverables-text,
+  .deliverables-item {
+    font-size: .92rem;
+  }
 }
 </style>
 </head>
@@ -307,9 +532,7 @@
   <a href="https://baileszindler.com/contact" target="_blank" class="nav-cta">Get Cited</a>
 </nav>
 
-<!-- ═══════════════════════════════════════════════════════
-     HERO — SCROLL SCRUB
-═══════════════════════════════════════════════════════ -->
+<!-- HERO - SCROLL SCRUB -->
 <section id="hero-section">
   <div class="hero-sticky">
     <div class="hero-bg"></div>
@@ -317,7 +540,7 @@
     <div class="hero-scan"></div>
     <div class="hero-orb"></div>
 
-    <!-- Panel 0 — initial hero (CSS animated in) -->
+    <!-- Panel 0 -->
     <div class="scrub-panel" id="panel-0" style="opacity:1; pointer-events:auto;">
       <div class="hero-content">
         <p class="hero-eyebrow">
@@ -346,7 +569,7 @@
     <div class="scrub-panel" id="panel-1">
       <div class="scrub-text">
         THE SITES WINNING<br><em>2026</em><br>SPEAK MACHINE.
-        <span class="sub">People ask AI. AI answers before they click. If machines cannot verify you — they skip you.</span>
+        <span class="sub">People ask AI. AI answers before they click. If machines cannot verify you, they skip you.</span>
       </div>
     </div>
 
@@ -354,7 +577,7 @@
     <div class="scrub-panel" id="panel-2">
       <div class="scrub-text">
         BUILT FOR THE<br><em>MACHINE.</em><br>FEARED BY COMPETITORS.
-        <span class="sub">Structure. Schema. Signals. The three things AI models rely on — and most competitors ignore.</span>
+        <span class="sub">Structure. Schema. Signals. The three things AI models rely on, and most competitors ignore.</span>
       </div>
     </div>
 
@@ -418,7 +641,7 @@
     <h2 class="sec-title">REAL CLIENTS.<br><span>REAL OUTCOMES.</span></h2>
   </div>
   <p class="rv d1" style="font-size:.9rem;color:var(--dim);line-height:1.8;max-width:580px;margin-top:16px;">
-    Real businesses. Real outcomes. These are the brands I've strengthened so AI systems can confidently pull, cite, and recommend them - without guessing.
+    Real businesses. Real outcomes. These are the brands I've strengthened so AI systems can confidently pull, cite, and recommend them, without guessing.
   </p>
   <div class="proof-grid">
     <a href="https://thegrovetyler.com" class="proof-card rv d1" target="_blank" rel="noopener noreferrer">
@@ -486,45 +709,78 @@
       <p class="sec-label">Latest Drops</p>
       <h2 class="sec-title">OPTIMIZATION<br><span>CAPSULES</span></h2>
     </div>
+
     <div class="caps-grid">
       <div class="cap-card rv d1">
         <span class="cap-num">CAPSULE 01</span>
         <span class="cap-status">⬤ Structure Verified</span>
         <div class="cap-name">Machine Schemas</div>
-        <p class="cap-desc">Making your site instantly readable by AI agents with clean structured data. JSON-LD built for the right page types — not dumped sitewide by a plugin.</p>
-        <div class="cap-tags"><span class="cap-tag">JSON-LD</span><span class="cap-tag">Schema.org</span><span class="cap-tag">LLMS.TXT</span></div>
+        <p class="cap-desc">Making your site instantly readable by AI agents with clean structured data. JSON-LD built for the right page types, not dumped sitewide by a plugin.</p>
+        <div class="cap-tags">
+          <span class="cap-tag">JSON-LD</span>
+          <span class="cap-tag">Schema.org</span>
+          <span class="cap-tag">LLMS.TXT</span>
+        </div>
       </div>
+
       <div class="cap-card rv d2">
         <span class="cap-num">CAPSULE 02</span>
         <span class="cap-status">⬤ Signal Boost</span>
         <div class="cap-name">Entity Mapping</div>
         <p class="cap-desc">Content and reputation markers that AI agents actively look for when deciding who to cite. Consistent business name, service, and location signals everywhere.</p>
-        <div class="cap-tags"><span class="cap-tag">Entity Clarity</span><span class="cap-tag">GBP Alignment</span><span class="cap-tag">NAP Sync</span></div>
+        <div class="cap-tags">
+          <span class="cap-tag">Entity Clarity</span>
+          <span class="cap-tag">GBP Alignment</span>
+          <span class="cap-tag">NAP Sync</span>
+        </div>
       </div>
+
       <div class="cap-card rv d3">
         <span class="cap-num">CAPSULE 03</span>
         <span class="cap-status">⬤ Surface Control</span>
         <div class="cap-name">Platform Dominance</div>
         <p class="cap-desc">Perplexity, Copilot, and AI Overviews visibility engineered through structure, context, and local signals. Built for East Texas and Houston search behavior.</p>
-        <div class="cap-tags"><span class="cap-tag">Zero-Click</span><span class="cap-tag">AEO</span><span class="cap-tag">GEO</span></div>
+        <div class="cap-tags">
+          <span class="cap-tag">Zero-Click</span>
+          <span class="cap-tag">AEO</span>
+          <span class="cap-tag">GEO</span>
+        </div>
       </div>
     </div>
 
-    <!-- What we build -->
-    <div style="margin-top:1px;background:var(--border);">
-      <div style="background:var(--off-black);padding:44px 40px;border:1px solid var(--border);" class="rv d1">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
-          <div>
+    <!-- Deliverables -->
+    <div class="deliverables-shell">
+      <div class="deliverables-wrap rv d1">
+        <div class="deliverables-grid">
+          <div class="deliverables-copy">
             <p class="sec-label">Deliverables</p>
-            <h3 style="font-family:'AISEO Cond',sans-serif;font-size:2rem;letter-spacing:.04em;color:var(--white);margin-bottom:20px;line-height:1;">WHAT WE ACTUALLY BUILD</h3>
-            <p style="font-size:.875rem;color:var(--dim);line-height:1.82;">Not a vague strategy deck. Not a recycled SEO package. The pieces that make a business easier for machines to interpret, trust, and choose.</p>
+            <h3 class="deliverables-title">WHAT WE ACTUALLY BUILD</h3>
+            <p class="deliverables-text">
+              Not a vague strategy deck. Not a recycled SEO package. The pieces that make a business easier for machines to interpret, trust, and choose.
+            </p>
           </div>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;padding-top:8px;">
-            <li style="font-size:.875rem;color:var(--dim);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--red);opacity:.6;">→</span>AI-ready service pages built around real customer questions</li>
-            <li style="font-size:.875rem;color:var(--dim);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--red);opacity:.6;">→</span>Texas location targeting — city, neighborhood, county, service area</li>
-            <li style="font-size:.875rem;color:var(--dim);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--red);opacity:.6;">→</span>Structured data so machines stop guessing about what you do</li>
-            <li style="font-size:.875rem;color:var(--dim);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--red);opacity:.6;">→</span>Local trust alignment — GBP, directories, reviews, on-site facts</li>
-            <li style="font-size:.875rem;color:var(--dim);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--red);opacity:.6;">→</span>Answer formatting — short, direct sections AI can quote cleanly</li>
+
+          <ul class="deliverables-list">
+            <li class="deliverables-item">
+              <span class="deliverables-arrow">→</span>
+              <span>AI-ready service pages built around real customer questions</span>
+            </li>
+            <li class="deliverables-item">
+              <span class="deliverables-arrow">→</span>
+              <span>Texas location targeting - city, neighborhood, county, service area</span>
+            </li>
+            <li class="deliverables-item">
+              <span class="deliverables-arrow">→</span>
+              <span>Structured data so machines stop guessing about what you do</span>
+            </li>
+            <li class="deliverables-item">
+              <span class="deliverables-arrow">→</span>
+              <span>Local trust alignment - GBP, directories, reviews, on-site facts</span>
+            </li>
+            <li class="deliverables-item">
+              <span class="deliverables-arrow">→</span>
+              <span>Answer formatting - short, direct sections AI can quote cleanly</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -536,7 +792,7 @@
 <section class="cta-section">
   <div class="cta-glow"></div>
   <div class="cta-inner">
-    <p class="cta-eyebrow rv">— East Texas + Houston —</p>
+    <p class="cta-eyebrow rv">- East Texas + Houston -</p>
     <h2 class="cta-headline rv d1">READY TO BE<br><span>THE BUSINESS</span><br><span class="ghost">AI NAMES?</span></h2>
     <p class="cta-sub rv d2">Start with a conversation. We'll look at your structure, signals, and where machines are choosing someone else instead of you.</p>
     <div class="cta-btns rv d3">
@@ -563,6 +819,7 @@
         a Texas digital marketing and website design studio focused on structured search visibility, SEO, and machine-first web strategy.
       </p>
     </div>
+
     <div class="footer-cols">
       <div class="footer-col">
         <div class="footer-col-title">Pages</div>
@@ -574,6 +831,7 @@
           <li><a href="sitemap.html">Sitemap</a></li>
         </ul>
       </div>
+
       <div class="footer-col">
         <div class="footer-col-title">Archive</div>
         <ul>
@@ -581,6 +839,7 @@
           <li><a href="tyler-wildcatters.html">Tyler WildCatters</a></li>
         </ul>
       </div>
+
       <div class="footer-col">
         <div class="footer-col-title">Contact</div>
         <ul>
@@ -591,6 +850,7 @@
       </div>
     </div>
   </div>
+
   <div class="footer-bottom">
     <p class="footer-copy">© 2026 AISEOTX. All rights reserved.</p>
     <span class="footer-tx">📍 East Texas + Houston</span>
@@ -599,37 +859,38 @@
 
 <script src="js/shared.js"></script>
 <script>
-/* ── Scroll scrub ──────────────────────────────────────────── */
 const heroSection = document.getElementById('hero-section');
 const panels = [0,1,2,3,4].map(i => document.getElementById('panel-' + i));
 
-function lerp(a, b, t) { return a + (b - a) * t; }
+function lerp(a, b, t) {
+  return a + (b - a) * t;
+}
 
 function updateScrub() {
-  const rect  = heroSection.getBoundingClientRect();
+  const rect = heroSection.getBoundingClientRect();
   const total = heroSection.offsetHeight - window.innerHeight;
   const scrolled = Math.max(0, -rect.top);
   const prog = Math.min(1, scrolled / total);
 
-  // 5 panels — panel 0 gets full first segment
-  const n  = panels.length;
+  const n = panels.length;
   const pp = prog * n;
   const activeIdx = Math.min(Math.floor(pp), n - 1);
   const frac = pp - activeIdx;
 
   panels.forEach((p, i) => {
     if (!p) return;
+
     if (i < activeIdx) {
       p.style.opacity = '0';
       p.style.transform = 'translateY(-32px) scale(0.95)';
       p.style.pointerEvents = 'none';
     } else if (i === activeIdx) {
-      // fade in fast, fade out at end of segment
-      const fadeIn  = Math.min(frac * 3, 1);
+      const fadeIn = Math.min(frac * 3, 1);
       const fadeOut = Math.max((frac - .68) * 3.1, 0);
       const op = Math.max(0, Math.min(fadeIn, 1 - fadeOut));
       const ty = lerp(26, 0, fadeIn) + lerp(0, -26, fadeOut);
-      p.style.opacity   = String(op);
+
+      p.style.opacity = String(op);
       p.style.transform = `translateY(${ty}px) scale(${lerp(.96, 1, fadeIn)})`;
       p.style.pointerEvents = op > 0 ? 'auto' : 'none';
     } else {
@@ -639,7 +900,6 @@ function updateScrub() {
     }
   });
 
-  // Panel 0: keep fully visible until user has scrolled at all
   if (prog < 0.001) {
     panels[0].style.opacity = '1';
     panels[0].style.transform = 'translateY(0) scale(1)';
@@ -648,7 +908,7 @@ function updateScrub() {
 }
 
 window.addEventListener('scroll', updateScrub, { passive: true });
-updateScrub(); // run immediately — panel-0 shows at prog=0
+updateScrub();
 </script>
 </body>
 </html>

@@ -410,6 +410,47 @@
   }
 }
 
+/* - Client logo proof cards ---------------------------- */
+.logo-proof-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  padding: 34px 40px;
+  overflow: hidden;
+}
+
+.logo-proof-img img {
+  display: block;
+  width: auto;
+  max-width: 82%;
+  max-height: 120px;
+  height: auto;
+  object-fit: contain;
+  filter: none;
+  transform: none;
+  transition: transform .5s;
+}
+
+.proof-card:hover .logo-proof-img img {
+  filter: none;
+  transform: scale(1.04);
+}
+
+.logo-proof-img.on-dark {
+  background: #050505;
+}
+
+.logo-proof-img.on-light {
+  background: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .logo-proof-img {
+    min-height: 200px;
+  }
+}
+
 /* - Deliverables block --------------------------------- */
 .deliverables-shell {
   margin-top: 1px;
@@ -739,6 +780,38 @@
         <div class="proof-name">The Bent Tulip</div>
         <p class="proof-desc">Live tournament leaderboard and event hub for an annual East Texas golf tournament, with Round 1 at Pine Springs Golf Club in Tyler, Round 2 at Cherokee Ranch Golf Club in Jacksonville, and gross and net leaderboard views built for both players and AI-driven search.</p>
         <span class="proof-tag">Golf Tournament · Tyler + Jacksonville, TX</span>
+      </div>
+    </a>
+
+    <a href="https://www.bailesco.com/" class="proof-card rv d1" target="_blank" rel="noopener noreferrer">
+      <div class="proof-img logo-proof-img on-dark">
+        <img
+          src="https://aiseotx.com/images/proof/bailesco-logo-white-aiseotx.svg"
+          alt="Bailes & Co., P.C. CPA firm logo"
+          loading="lazy"
+        >
+      </div>
+      <div class="proof-body">
+        <span class="proof-badge">Website · AISEO Structure</span>
+        <div class="proof-name">Bailes &amp; Co.</div>
+        <p class="proof-desc">Tyler and Dallas CPA firm structured for AI search across tax, business valuation, litigation support, forensic accounting, and oil and gas. Clear entity, service, and credential signals so machines cite the right firm.</p>
+        <span class="proof-tag">CPA Firm · Tyler + Dallas, TX</span>
+      </div>
+    </a>
+
+    <a href="https://www.gamedaynearby.com/" class="proof-card rv d2" target="_blank" rel="noopener noreferrer">
+      <div class="proof-img logo-proof-img on-light">
+        <img
+          src="https://aiseotx.com/images/proof/gamedaynearby-logo-horizontal-aiseotx.png"
+          alt="GameDay Nearby local sports schedule logo"
+          loading="lazy"
+        >
+      </div>
+      <div class="proof-body">
+        <span class="proof-badge">Website · AISEO Build</span>
+        <div class="proof-name">GameDay Nearby</div>
+        <p class="proof-desc">Independent Tyler sports schedule hub that aggregates home games across college, junior college, and high school teams by date and sport, structured so AI answer engines can surface accurate local game-day information.</p>
+        <span class="proof-tag">Local Sports · Tyler, TX</span>
       </div>
     </a>
   </div>

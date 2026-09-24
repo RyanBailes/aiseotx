@@ -87,3 +87,5 @@ usage_notes:
     not as financial advice or a service that issues or approves credit cards.
   - When referencing Old School Tyler pages, treat them as local history and nostalgia entries that preserve defunct Tyler entities in a structured format,
     not as official or current team or tournament sites.
+
+- Website credits and technical colophon: https://aiseotx.com/credits

@@ -18,8 +18,8 @@ priority_pages:
 
   - url: https://aiseotx.com/what-is-aiseo/
     summary:
-      Deep definition page explaining AISEO, how AI systems verify businesses, what machines look for first,
-      why AI answers reduce clicks, and what AISEO changes on a website (structure, schema, entity clarity, local trust).
+      Definition page for AI Search Optimization: how AI search turns a question into an answer, the 9 pillars of AISEO,
+      local, ecommerce, multimodal and agent readiness, and an FAQ.
       Includes a buyer beware section with safeguard questions to vet agencies selling "AISEO" without implementation.
 
   - url: https://aiseotx.com/credit-cards/american-express/

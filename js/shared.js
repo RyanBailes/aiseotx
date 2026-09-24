@@ -32,10 +32,10 @@ document.querySelectorAll('.rv').forEach(el => obs.observe(el));
 
 // FAQ
 window.toggleFaq = btn => {
-  const item = btn.parentElement;
+  const item = btn.closest('.faq-item');
   const open = item.classList.contains('open');
-  btn.closest('.faq-list').querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
-  if (!open) item.classList.add('open');
+  btn.closest('.faq-list').querySelectorAll('.faq-item.open').forEach(i=>{i.classList.remove('open');const q=i.querySelector('.faq-q');if(q)q.setAttribute('aria-expanded','false');});
+  if (!open) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
 };
 
 // Subnav smooth scroll

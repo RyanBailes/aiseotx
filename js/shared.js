@@ -40,10 +40,18 @@ window.toggleFaq = btn => {
 
 // Subnav smooth scroll + current-section highlighting
 const subnavLinks = Array.from(document.querySelectorAll('.page-subnav a'));
+let activeSubnavLink = null;
 const setSubnavActive = link => {
+  if (!link || link === activeSubnavLink) return;
+  activeSubnavLink = link;
   subnavLinks.forEach(x => x.classList.toggle('active', x === link));
-  if (link && link.scrollIntoView) {
-    link.scrollIntoView({behavior:'smooth',block:'nearest',inline:'nearest'});
+  // Scroll only the subnav strip sideways. scrollIntoView would also scroll
+  // the window, yanking the page down on mobile where the subnav starts below the fold.
+  const strip = link.closest('.page-subnav');
+  if (strip && strip.scrollWidth > strip.clientWidth) {
+    const lr = link.getBoundingClientRect(), sr = strip.getBoundingClientRect();
+    const left = strip.scrollLeft + (lr.left - sr.left) - (strip.clientWidth - lr.width) / 2;
+    strip.scrollTo({left: Math.max(0, left), behavior: 'smooth'});
   }
 };
 

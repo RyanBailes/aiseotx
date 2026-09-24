@@ -97,5 +97,3 @@ notes:
   - https://aiseotx.com/old-school-tyler/
   - https://aiseotx.com/old-school-tyler/eisenhower-international-golf-classic/
   - https://aiseotx.com/old-school-tyler/tyler-wildcatters/
-
-- Website credits and technical colophon: https://aiseotx.com/credits

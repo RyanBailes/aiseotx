@@ -65,4 +65,13 @@
     <priority>0.6</priority>
   </url>
 
+
+  <!-- Website Credits -->
+  <url>
+    <loc>https://aiseotx.com/credits</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>

@@ -38,13 +38,49 @@ window.toggleFaq = btn => {
   if (!open) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
 };
 
-// Subnav smooth scroll
-document.querySelectorAll('.page-subnav a').forEach(a => {
+// Subnav smooth scroll + current-section highlighting
+const subnavLinks = Array.from(document.querySelectorAll('.page-subnav a'));
+const setSubnavActive = link => {
+  subnavLinks.forEach(x => x.classList.toggle('active', x === link));
+  if (link && link.scrollIntoView) {
+    link.scrollIntoView({behavior:'smooth',block:'nearest',inline:'nearest'});
+  }
+};
+
+subnavLinks.forEach(a => {
   a.addEventListener('click', e => {
+    const id = (a.getAttribute('href') || '').replace('#','');
+    const t = document.getElementById(id);
+    if (!t) return;
     e.preventDefault();
-    const t = document.getElementById(a.getAttribute('href').replace('#',''));
-    if (t) t.scrollIntoView({behavior:'smooth',block:'start'});
-    document.querySelectorAll('.page-subnav a').forEach(x=>x.classList.remove('active'));
-    a.classList.add('active');
+    t.scrollIntoView({behavior:'smooth',block:'start'});
+    setSubnavActive(a);
   });
 });
+
+if (subnavLinks.length) {
+  const targets = subnavLinks
+    .map(link => ({link, target:document.getElementById((link.getAttribute('href') || '').replace('#',''))}))
+    .filter(item => item.target);
+
+  let subnavTicking = false;
+  const syncSubnav = () => {
+    const offset = window.innerWidth <= 768 ? 118 : 132;
+    let current = targets[0];
+    targets.forEach(item => {
+      if (item.target.getBoundingClientRect().top <= offset) current = item;
+    });
+    if (current) setSubnavActive(current.link);
+    subnavTicking = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!subnavTicking) {
+      subnavTicking = true;
+      requestAnimationFrame(syncSubnav);
+    }
+  }, {passive:true});
+
+  window.addEventListener('resize', syncSubnav);
+  syncSubnav();
+}

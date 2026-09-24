@@ -36,3 +36,85 @@
 @media (max-width:768px){.pillars-grid.grid-3{grid-template-columns:1fr}
 .flow-strip li span{white-space:normal}
 }
+
+/* what-is-aiseo — UX spacing pass 2026-09-24 */
+.what-is-aiseo-page .page-hero{padding:120px 52px 64px}
+.what-is-aiseo-page .page-hero-eyebrow{margin-bottom:16px}
+.what-is-aiseo-page .page-hero-title{margin-bottom:24px}
+.what-is-aiseo-page .hero-split{gap:48px;margin-top:32px;padding-top:32px}
+.what-is-aiseo-page .hero-btns{margin-top:32px}
+.what-is-aiseo-page .page-updated{margin-top:24px}
+
+.what-is-aiseo-page .page-subnav-wrap{top:63px}
+.what-is-aiseo-page .page-subnav a{padding:13px 20px}
+.what-is-aiseo-page .page-subnav{scrollbar-width:none}
+.what-is-aiseo-page .page-subnav::-webkit-scrollbar{display:none}
+
+.what-is-aiseo-page .aiseo-body{padding:64px 52px 96px}
+.what-is-aiseo-page .def-block{gap:56px;margin-bottom:56px;padding-bottom:56px}
+.what-is-aiseo-page .definition-stack .def-block{margin-bottom:48px;padding-bottom:48px}
+.what-is-aiseo-page .page-section{margin-top:64px;padding-top:64px}
+.what-is-aiseo-page .section-intro{margin-top:20px}
+.what-is-aiseo-page .section-outro{margin-top:36px}
+.what-is-aiseo-page .word-row{margin:18px 0 22px}
+.what-is-aiseo-page .prompt-list{margin:16px 0 20px}
+
+.what-is-aiseo-page .pillars-grid{margin-top:32px}
+.what-is-aiseo-page .pillar-card{padding:28px 24px}
+.what-is-aiseo-page .pillar-card-name{margin-bottom:10px}
+.what-is-aiseo-page .snapshot-grid{margin:36px 0}
+.what-is-aiseo-page .snapshot-cell{padding:28px 24px}
+.what-is-aiseo-page .pull-quote{margin:32px 0;padding:22px 28px}
+
+.what-is-aiseo-page .beware-section{margin-top:64px;padding-top:64px}
+.what-is-aiseo-page .beware-header{margin-bottom:32px}
+.what-is-aiseo-page .safeguard{padding:30px 26px}
+.what-is-aiseo-page .sg-title{margin-bottom:12px}
+
+.what-is-aiseo-page .faq-title{margin-bottom:32px}
+.what-is-aiseo-page .faq-list{max-width:860px}
+.what-is-aiseo-page .faq-q{padding:20px 0}
+.what-is-aiseo-page .faq-item.open .faq-a{padding-bottom:20px}
+
+.what-is-aiseo-page .cta-section{padding:96px 52px}
+.what-is-aiseo-page .cta-sub{margin-bottom:32px}
+.what-is-aiseo-page .cta-sub-wide{margin-bottom:24px}
+
+.what-is-aiseo-page .aiseo-body section[id]{scroll-margin-top:120px}
+
+@media (max-width:1024px){
+  .what-is-aiseo-page .page-hero{padding-top:112px}
+  .what-is-aiseo-page .def-block{gap:36px}
+  .what-is-aiseo-page .pillar-card{padding:26px 22px}
+}
+
+@media (max-width:768px){
+  .what-is-aiseo-page .page-hero{padding:96px 20px 48px}
+  .what-is-aiseo-page .page-hero-eyebrow{margin-bottom:12px}
+  .what-is-aiseo-page .page-hero-title{margin-bottom:20px}
+  .what-is-aiseo-page .hero-split{gap:28px;margin-top:28px;padding-top:28px}
+  .what-is-aiseo-page .hero-btns{margin-top:28px}
+  .what-is-aiseo-page .page-updated{margin-top:20px}
+  .what-is-aiseo-page .page-subnav-wrap{top:57px}
+  .what-is-aiseo-page .page-subnav{padding:0 20px}
+  .what-is-aiseo-page .page-subnav a{padding:12px 16px}
+  .what-is-aiseo-page .aiseo-body{padding:48px 20px 72px}
+  .what-is-aiseo-page .def-block,
+  .what-is-aiseo-page .definition-stack .def-block{gap:28px;margin-bottom:40px;padding-bottom:40px}
+  .what-is-aiseo-page .page-section{margin-top:48px;padding-top:48px}
+  .what-is-aiseo-page .section-intro{margin-top:16px}
+  .what-is-aiseo-page .section-outro{margin-top:28px}
+  .what-is-aiseo-page .pillars-grid{margin-top:28px}
+  .what-is-aiseo-page .pillar-card{padding:24px 20px}
+  .what-is-aiseo-page .snapshot-grid{margin:28px 0}
+  .what-is-aiseo-page .snapshot-cell{padding:24px 20px}
+  .what-is-aiseo-page .pull-quote{margin:28px 0;padding:20px 22px}
+  .what-is-aiseo-page .beware-section{margin-top:48px;padding-top:48px}
+  .what-is-aiseo-page .beware-header{margin-bottom:24px}
+  .what-is-aiseo-page .safeguard{padding:26px 22px}
+  .what-is-aiseo-page .faq-title{margin-bottom:24px}
+  .what-is-aiseo-page .faq-q{padding:18px 0}
+  .what-is-aiseo-page .faq-item.open .faq-a{padding-bottom:18px}
+  .what-is-aiseo-page .cta-section{padding:64px 20px}
+  .what-is-aiseo-page .aiseo-body section[id]{scroll-margin-top:108px}
+}

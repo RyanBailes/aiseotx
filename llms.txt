@@ -18,8 +18,9 @@ priority_pages:
 
   - url: https://aiseotx.com/
     summary:
-      Single page overview of AISEOTX, what AI SEO is, who it is for, how the process works,
-      and proof from Texas brands that already appear in AI answers.
+      Homepage for AISEOTX: AI search optimization for Texas businesses. Covers the client work (The Grove, Cecil & Lou,
+      Leatherwood & Schindler, Bailes & Co., GameDay Nearby, Ihrig Properties), the be found / be understood / be supported
+      foundation, what AISEOTX builds, a short AISEO definition, and an FAQ.
 
   - url: https://aiseotx.com/what-is-aiseo/
     summary:

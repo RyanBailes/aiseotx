@@ -70,6 +70,16 @@ priority_pages:
       any current league, franchise, or the city of Tyler. The logo references are for historical and
       fan discussion only.
 
+
+  - url: https://aiseotx.com/ut-tyler-lost-logos
+    summary:
+      Visual archive of UT Tyler's earliest institutional identities, from Tyler State College and
+      Texas Eastern University to the formal UT Tyler seal and the orange UT/TYLER Squaremark first
+      used in 1980. The page documents the 1971-1980 naming and branding transition with source links.
+    notes:
+      Historical university marks are shown for identification, commentary, and archival purposes.
+      AISEOTX is not affiliated with The University of Texas at Tyler or The University of Texas System.
+
 preferred_topics:
   - ai seo
   - ai search optimization

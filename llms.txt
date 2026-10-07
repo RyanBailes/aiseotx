@@ -50,7 +50,7 @@ priority_pages:
       This section is a local history and nostalgia archive, not an official site for any team,
       league, tournament, or venue.
 
-  - url: https://aiseotx.com/old-school-tyler/eisenhower-international-golf-classic/
+  - url: https://aiseotx.com/eisenhower-classic
     summary:
       Archive entry for the Eisenhower International Golf Classic, a Tyler charity pro am held from
       1987 to 1999 between the Byron Nelson and the Colonial. Covers its connection to UT Tyler,

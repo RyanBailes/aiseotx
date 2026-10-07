@@ -19,11 +19,11 @@ document.querySelectorAll('a,button').forEach(el=>{
 const navbar = document.querySelector('nav');
 window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60), {passive:true});
 
-// Active link — match by href filename
-const cur = location.pathname.split('/').pop() || 'index.html';
+// Active link — match by page name; the live site serves clean URLs (/tyler-crude), local files end in .html
+const pageKey = p => { const k = (p || '').split(/[?#]/)[0].replace(/\/+$/, '').split('/').pop().replace(/\.html$/, ''); return k === 'index' ? '' : k; };
+const cur = pageKey(location.pathname);
 document.querySelectorAll('.nav-links a').forEach(a => {
-  const href = (a.getAttribute('href') || '').split('/').pop();
-  if (href === cur) a.classList.add('active');
+  if (pageKey(a.getAttribute('href')) === cur) a.classList.add('active');
 });
 
 // Scroll reveal
@@ -92,3 +92,135 @@ if (subnavLinks.length) {
   window.addEventListener('resize', syncSubnav);
   syncSubnav();
 }
+
+// Mobile menu — built from the desktop nav so every page stays in sync
+(function () {
+  const nav = document.querySelector('nav');
+  const list = nav && nav.querySelector('.nav-links');
+  if (!list) return;
+
+  const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+  const reduced = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isCurrent = a => pageKey(a.getAttribute('href')) === cur;
+
+  // Toggle button
+  const btn = el('button', 'nav-toggle');
+  btn.type = 'button';
+  btn.setAttribute('aria-expanded', 'false');
+  btn.setAttribute('aria-controls', 'mobile-menu');
+  btn.setAttribute('aria-label', 'Open menu');
+  const lines = el('span', 'nav-toggle-lines');
+  lines.setAttribute('aria-hidden', 'true');
+  lines.append(el('span'), el('span'));
+  const label = el('span', 'nav-toggle-label', 'Menu');
+  label.setAttribute('aria-hidden', 'true');
+  btn.append(lines, label);
+  nav.appendChild(btn);
+
+  // Panel
+  const menu = el('div', 'mobile-menu');
+  menu.id = 'mobile-menu';
+  menu.setAttribute('role', 'dialog');
+  menu.setAttribute('aria-modal', 'true');
+  menu.setAttribute('aria-label', 'Site menu');
+  menu.hidden = true;
+  menu.append(el('div', 'mm-grid'), el('div', 'mm-scan'));
+
+  const inner = el('div', 'mm-inner');
+  const eyebrow = el('p', 'mm-eyebrow');
+  eyebrow.append(el('span', 'ln'), document.createTextNode('AISEOTX / Navigate'), el('span', 'ln'));
+  const ol = el('ol', 'mm-list');
+
+  let i = 0;
+  Array.from(list.children).forEach(li => {
+    const top = li.querySelector(':scope > a');
+    if (!top) return;
+    const item = el('li', 'mm-item');
+    item.style.setProperty('--i', i);
+    const a = el('a', 'mm-link');
+    a.href = top.getAttribute('href');
+    const num = el('span', 'mm-num', String(i + 1).padStart(2, '0'));
+    num.setAttribute('aria-hidden', 'true');
+    const wrap = el('span', 'mm-text-wrap');
+    wrap.appendChild(el('span', 'mm-text', top.textContent.trim()));
+    a.append(num, wrap);
+    if (isCurrent(top)) { a.classList.add('is-current'); a.setAttribute('aria-current', 'page'); }
+    item.appendChild(a);
+
+    const subs = li.querySelectorAll('.dropdown-menu a');
+    if (subs.length) {
+      const ul = el('ul', 'mm-sub');
+      subs.forEach((s, j) => {
+        const sli = el('li');
+        sli.style.setProperty('--j', j);
+        const sa = el('a', null, s.textContent.trim());
+        sa.href = s.getAttribute('href');
+        if (isCurrent(s)) { sa.classList.add('is-current'); sa.setAttribute('aria-current', 'page'); }
+        sli.appendChild(sa);
+        ul.appendChild(sli);
+      });
+      item.appendChild(ul);
+    }
+    ol.appendChild(item);
+    i++;
+  });
+  menu.style.setProperty('--count', i);
+
+  const foot = el('div', 'mm-foot');
+  const cta = nav.querySelector('.nav-cta');
+  if (cta) {
+    const c = el('a', 'btn-red mm-cta');
+    c.href = cta.getAttribute('href');
+    c.target = '_blank';
+    c.rel = 'noopener noreferrer';
+    c.append(el('span', null, cta.textContent.trim()), el('span', 'arr', '→'));
+    foot.appendChild(c);
+  }
+  foot.appendChild(el('span', 'mm-tag', 'East Texas + Houston'));
+
+  inner.append(eyebrow, ol, foot);
+  menu.appendChild(inner);
+  document.body.appendChild(menu);
+
+  // Behavior
+  const root = document.documentElement;
+  let closeTimer = null;
+  const focusables = () => [btn, ...menu.querySelectorAll('a[href]')];
+
+  const open = () => {
+    clearTimeout(closeTimer);
+    const r = btn.getBoundingClientRect();
+    menu.style.setProperty('--mm-x', (r.left + r.width / 2) + 'px');
+    menu.style.setProperty('--mm-y', (r.top + r.height / 2) + 'px');
+    menu.hidden = false;
+    void menu.offsetWidth; // commit the closed state so the opening transition runs
+    root.classList.add('menu-open');
+    btn.setAttribute('aria-expanded', 'true');
+    btn.setAttribute('aria-label', 'Close menu');
+    label.textContent = 'Close';
+    setTimeout(() => { const f = menu.querySelector('.mm-link'); if (f) f.focus({preventScroll: true}); }, reduced() ? 0 : 350);
+  };
+  const close = (returnFocus = true) => {
+    if (!root.classList.contains('menu-open')) return;
+    root.classList.remove('menu-open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Open menu');
+    label.textContent = 'Menu';
+    closeTimer = setTimeout(() => { menu.hidden = true; }, reduced() ? 0 : 650);
+    if (returnFocus) btn.focus({preventScroll: true});
+  };
+
+  btn.addEventListener('click', () => (root.classList.contains('menu-open') ? close() : open()));
+  menu.addEventListener('click', e => { if (e.target.closest('a')) close(false); });
+  document.addEventListener('keydown', e => {
+    if (!root.classList.contains('menu-open')) return;
+    if (e.key === 'Escape') { e.preventDefault(); close(); return; }
+    if (e.key === 'Tab') {
+      const f = focusables(), first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+  window.matchMedia('(min-width: 769px)').addEventListener('change', e => { if (e.matches) close(false); });
+  window.addEventListener('pageshow', () => close(false)); // back/forward cache restores
+})();

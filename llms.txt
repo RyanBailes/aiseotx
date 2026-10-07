@@ -60,7 +60,7 @@ priority_pages:
       This page documents the history and local impact of a defunct event for reference purposes.
       It is not affiliated with the PGA Tour, UT Tyler, Willow Brook Country Club, or Sister Cities.
 
-  - url: https://aiseotx.com/old-school-tyler/tyler-wildcatters/
+  - url: https://aiseotx.com/tyler-wildcatters
     summary:
       Archive entry for the Tyler WildCatters, an independent professional baseball club that played
       in the Texas-Louisiana League at Mike Carter Field from 1994 through 1997. Covers league context,

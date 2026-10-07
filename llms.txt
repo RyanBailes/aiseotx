@@ -81,6 +81,15 @@ priority_pages:
       Historical university marks are shown for identification, commentary, and archival purposes.
       AISEOTX is not affiliated with The University of Texas at Tyler or The University of Texas System.
 
+  - url: https://aiseotx.com/tyler-crude
+    summary:
+      Archive entry for the Tyler Crude, a planned American Indoor Football expansion team announced in Tyler, Texas in 2025
+      for the 2026 season, owned by Richard Rodgers and planned for the Oil Palace. The arena entered foreclosure (sold at auction
+      October 7, 2025) and the football operation appears to have shifted to Odessa as the Odessa Drillers. No game was played in Tyler.
+    notes:
+      League communications did not consistently describe a formal relocation; describe the Odessa link as strongly evidenced, not official.
+      The uniform artwork on the page is speculative concept art, not an official design. AISEOTX is not affiliated with any team or league named.
+
 preferred_topics:
   - ai seo
   - ai search optimization

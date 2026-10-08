@@ -52,81 +52,257 @@ gtag('config','AW-858429223');
 
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@graph":[
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@type":"Organization",
-      "@id":"https://aiseotx.com/#org",
-      "name":"AISEOTX",
-      "alternateName":"AI SEO Texas",
-      "url":"https://aiseotx.com/",
-      "logo":"https://aiseotx.com/images/logo/aiseotx-logo.jpg",
-      "founder":{"@type":"Person","name":"Ryan W. Bailes","url":"https://ryanbailes.com/"},
-      "parentOrganization":{"@type":"Organization","name":"Bailes + Zindler","url":"https://baileszindler.com/"}
+      "@type": "Organization",
+      "@id": "https://aiseotx.com/#org",
+      "name": "AISEOTX",
+      "alternateName": "AI SEO Texas",
+      "url": "https://aiseotx.com/",
+      "logo": "https://aiseotx.com/images/logo/aiseotx-logo.jpg",
+      "founder": {
+        "@type": "Person",
+        "name": "Ryan W. Bailes",
+        "url": "https://ryanbailes.com/"
+      },
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Bailes + Zindler",
+        "url": "https://baileszindler.com/"
+      }
     },
     {
-      "@type":"Article",
-      "@id":"https://aiseotx.com/tyler-crude#article",
-      "headline":"The Tyler Crude: Tyler's Football Team That Never Played",
-      "description":"In 2025, Tyler was getting its own professional indoor football team. It had a name, a logo, an owner, a league and plans to play at the Oil Palace. Then the arena ran into foreclosure trouble and the football operation surfaced in Odessa.",
-      "datePublished":"2026-10-07",
-      "dateModified":"2026-10-07",
-      "author":{"@type":"Person","name":"Ryan W. Bailes","url":"https://ryanbailes.com/"},
-      "publisher":{"@id":"https://aiseotx.com/#org"},
-      "mainEntityOfPage":"https://aiseotx.com/tyler-crude",
-      "isPartOf":{"@type":"CollectionPage","name":"Old School Tyler","url":"https://aiseotx.com/old-school-tyler"},
-      "image":[
+      "@type": "WebSite",
+      "@id": "https://aiseotx.com/#website",
+      "url": "https://aiseotx.com/",
+      "name": "AISEOTX",
+      "publisher": {
+        "@id": "https://aiseotx.com/#org"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://aiseotx.com/tyler-crude#webpage",
+      "url": "https://aiseotx.com/tyler-crude",
+      "name": "Tyler Crude: Tyler's Indoor Football Team That Never Played",
+      "description": "The Tyler Crude were supposed to bring pro indoor football to Tyler, Texas in 2026. Then the Oil Palace hit financial trouble and the operation surfaced in Odessa.",
+      "isPartOf": {
+        "@id": "https://aiseotx.com/#website"
+      },
+      "inLanguage": "en-US",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://aiseotx.com/images/tyler-crude/tyler-crude-og-1200x630.jpg"
+      },
+      "mainEntity": {
+        "@id": "https://aiseotx.com/tyler-crude#article"
+      },
+      "about": {
+        "@id": "https://aiseotx.com/tyler-crude#team"
+      },
+      "breadcrumb": {
+        "@id": "https://aiseotx.com/tyler-crude#breadcrumb"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://aiseotx.com/tyler-crude#article",
+      "headline": "The Tyler Crude: Tyler's Football Team That Never Played",
+      "description": "In 2025, Tyler was getting its own professional indoor football team. It had a name, a logo, an owner, a league and plans to play at the Oil Palace. Then the arena ran into foreclosure trouble and the football operation surfaced in Odessa.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": {
+        "@type": "Person",
+        "name": "Ryan W. Bailes",
+        "url": "https://ryanbailes.com/"
+      },
+      "publisher": {
+        "@id": "https://aiseotx.com/#org"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://aiseotx.com/tyler-crude#webpage"
+      },
+      "isPartOf": {
+        "@id": "https://aiseotx.com/tyler-crude#webpage"
+      },
+      "image": [
         "https://aiseotx.com/images/tyler-crude/tyler-crude-og-1200x630.jpg",
         "https://aiseotx.com/images/tyler-crude/tyler-crude-logo-football-player-carrying-oil-derrick.webp",
         "https://aiseotx.com/images/tyler-crude/tyler-crude-press-conference-flyer-derrick-dolls-oil-palace-aug-20-2025.webp"
       ],
-      "about":{"@id":"https://aiseotx.com/tyler-crude#team"},
-      "mentions":[
-        {"@id":"https://aiseotx.com/tyler-crude#oil-palace"},
-        {"@type":"SportsTeam","name":"Odessa Drillers","sport":"Indoor football","location":{"@type":"Place","name":"Ector County Coliseum","address":{"@type":"PostalAddress","addressLocality":"Odessa","addressRegion":"TX","addressCountry":"US"}}},
-        {"@type":"SportsOrganization","name":"American Indoor Football","alternateName":"AIF"},
-        {"@type":"Organization","name":"Indoor Sports United LLC"},
-        {"@type":"City","name":"Tyler, Texas"}
+      "about": {
+        "@id": "https://aiseotx.com/tyler-crude#team"
+      },
+      "mentions": [
+        {
+          "@id": "https://aiseotx.com/tyler-crude#oil-palace"
+        },
+        {
+          "@type": "SportsTeam",
+          "name": "Odessa Drillers",
+          "sport": "Indoor football",
+          "location": {
+            "@type": "Place",
+            "name": "Ector County Coliseum",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Odessa",
+              "addressRegion": "TX",
+              "addressCountry": "US"
+            }
+          }
+        },
+        {
+          "@type": "SportsOrganization",
+          "name": "American Indoor Football",
+          "alternateName": "AIF"
+        },
+        {
+          "@type": "Organization",
+          "name": "Indoor Sports United LLC"
+        },
+        {
+          "@type": "City",
+          "name": "Tyler, Texas"
+        }
       ]
     },
     {
-      "@type":"SportsTeam",
-      "@id":"https://aiseotx.com/tyler-crude#team",
-      "name":"Tyler Crude",
-      "sport":"Indoor football",
-      "description":"A planned American Indoor Football expansion franchise in Tyler, Texas, announced in 2025 for the 2026 season. It never played a game in Tyler.",
-      "logo":"https://aiseotx.com/images/tyler-crude/tyler-crude-logo-football-player-carrying-oil-derrick.webp",
-      "memberOf":{"@type":"SportsOrganization","name":"American Indoor Football","alternateName":"AIF"},
-      "location":{"@id":"https://aiseotx.com/tyler-crude#oil-palace"}
+      "@type": "SportsTeam",
+      "@id": "https://aiseotx.com/tyler-crude#team",
+      "name": "Tyler Crude",
+      "sport": "Indoor football",
+      "description": "A planned American Indoor Football expansion franchise in Tyler, Texas, announced in 2025 for the 2026 season. It never played a game in Tyler.",
+      "logo": "https://aiseotx.com/images/tyler-crude/tyler-crude-logo-football-player-carrying-oil-derrick.webp",
+      "memberOf": {
+        "@type": "SportsOrganization",
+        "name": "American Indoor Football",
+        "alternateName": "AIF"
+      },
+      "location": {
+        "@id": "https://aiseotx.com/tyler-crude#oil-palace"
+      }
     },
     {
-      "@type":"Place",
-      "@id":"https://aiseotx.com/tyler-crude#oil-palace",
-      "name":"Oil Palace",
-      "address":{"@type":"PostalAddress","streetAddress":"10408 State Hwy 64","addressLocality":"Tyler","addressRegion":"TX","postalCode":"75707","addressCountry":"US"}
+      "@type": "Place",
+      "@id": "https://aiseotx.com/tyler-crude#oil-palace",
+      "name": "Oil Palace",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10408 State Hwy 64",
+        "addressLocality": "Tyler",
+        "addressRegion": "TX",
+        "postalCode": "75707",
+        "addressCountry": "US"
+      }
     },
     {
-      "@type":"BreadcrumbList",
-      "itemListElement":[
-        {"@type":"ListItem","position":1,"name":"AISEOTX","item":"https://aiseotx.com/"},
-        {"@type":"ListItem","position":2,"name":"Old School Tyler","item":"https://aiseotx.com/old-school-tyler"},
-        {"@type":"ListItem","position":3,"name":"The Tyler Crude","item":"https://aiseotx.com/tyler-crude"}
-      ]
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AISEOTX",
+          "item": "https://aiseotx.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Old School Tyler",
+          "item": "https://aiseotx.com/old-school-tyler"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The Tyler Crude",
+          "item": "https://aiseotx.com/tyler-crude"
+        }
+      ],
+      "@id": "https://aiseotx.com/tyler-crude#breadcrumb"
     },
     {
-      "@type":"FAQPage",
-      "@id":"https://aiseotx.com/tyler-crude#faq",
-      "isPartOf":{"@id":"https://aiseotx.com/tyler-crude#article"},
-      "mainEntity":[
-        {"@type":"Question","name":"Was the Tyler Crude a real football team?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Tyler Crude were a real planned professional indoor-football franchise recognized by American Indoor Football for the 2026 season. The project never progressed far enough to play a game in Tyler."}},
-        {"@type":"Question","name":"Who owned the Tyler Crude?","acceptedAnswer":{"@type":"Answer","text":"Public accounts of American Indoor Football's 2025 expansion name Richard Rodgers as the owner."}},
-        {"@type":"Question","name":"Where were the Tyler Crude supposed to play?","acceptedAnswer":{"@type":"Answer","text":"The team planned to play at the Oil Palace in Tyler, Texas."}},
-        {"@type":"Question","name":"Why didn't the Tyler Crude play in Tyler?","acceptedAnswer":{"@type":"Answer","text":"The Oil Palace entered serious financial trouble while the franchise was being organized. The Tyler operation did not secure the arena arrangement it needed, and the Oil Palace was eventually sold at foreclosure auction in October 2025."}},
-        {"@type":"Question","name":"Did the Tyler Crude become the Odessa Drillers?","acceptedAnswer":{"@type":"Answer","text":"There is strong evidence connecting the two operations. Richard Rodgers was associated with the Tyler Crude and was later listed as the client on the Ector County Coliseum football proposal. Indoor Sports United, LLC holds the Coliseum agreement for the Odessa Drillers, and the Drillers' ticket seller record names the operator as \"Indoor Sports United LLC (dba Tyler Crude)\" at the Oil Palace's Tyler address. However, contemporary league communications did not consistently describe the transition as a formal relocation. The safest conclusion is that the football operation being developed for Tyler appears to have shifted to Odessa and continued there under the Odessa Drillers identity."}},
-        {"@type":"Question","name":"Did the Tyler Crude have players?","acceptedAnswer":{"@type":"Answer","text":"No complete confirmed Tyler Crude roster has been found. Contemporary coverage from the period suggests the organization was still assembling basic football operations."}},
-        {"@type":"Question","name":"Did the Tyler Crude ever play a game?","acceptedAnswer":{"@type":"Answer","text":"No confirmed game was played under the Tyler Crude name."}},
-        {"@type":"Question","name":"Were the Tyler Crude uniforms shown here real?","acceptedAnswer":{"@type":"Answer","text":"No. The uniform artwork shown on this page is a modern speculative concept inspired by the team's actual logo, colors and oil-field branding."}},
-        {"@type":"Question","name":"Did the Odessa Drillers move to Wyoming?","acceptedAnswer":{"@type":"Answer","text":"The evidence does not support describing the Odessa Drillers as having relocated to Wyoming. The Drillers said a social-media account had been hacked and denied that the franchise was relocating to Wyoming. Independent reporting confirming exactly what happened is limited."}}
+      "@type": "FAQPage",
+      "@id": "https://aiseotx.com/tyler-crude#faq",
+      "isPartOf": {
+        "@id": "https://aiseotx.com/tyler-crude#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was the Tyler Crude a real football team?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The Tyler Crude were a real planned professional indoor-football franchise recognized by American Indoor Football for the 2026 season. The project never progressed far enough to play a game in Tyler."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who owned the Tyler Crude?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Public accounts of American Indoor Football's 2025 expansion name Richard Rodgers as the owner."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where were the Tyler Crude supposed to play?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The team planned to play at the Oil Palace in Tyler, Texas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why didn't the Tyler Crude play in Tyler?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Oil Palace entered serious financial trouble while the franchise was being organized. The Tyler operation did not secure the arena arrangement it needed, and the Oil Palace was eventually sold at foreclosure auction in October 2025."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Did the Tyler Crude become the Odessa Drillers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is strong evidence connecting the two operations. Richard Rodgers was associated with the Tyler Crude and was later listed as the client on the Ector County Coliseum football proposal. Indoor Sports United, LLC holds the Coliseum agreement for the Odessa Drillers, and the Drillers' ticket seller record names the operator as \"Indoor Sports United LLC (dba Tyler Crude)\" at the Oil Palace's Tyler address. However, contemporary league communications did not consistently describe the transition as a formal relocation. The safest conclusion is that the football operation being developed for Tyler appears to have shifted to Odessa and continued there under the Odessa Drillers identity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Did the Tyler Crude have players?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No complete confirmed Tyler Crude roster has been found. Contemporary coverage from the period suggests the organization was still assembling basic football operations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Did the Tyler Crude ever play a game?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No confirmed game was played under the Tyler Crude name."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Were the Tyler Crude uniforms shown here real?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The uniform artwork shown on this page is a modern speculative concept inspired by the team's actual logo, colors and oil-field branding."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Did the Odessa Drillers move to Wyoming?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The evidence does not support describing the Odessa Drillers as having relocated to Wyoming. The Drillers said a social-media account had been hacked and denied that the franchise was relocating to Wyoming. Independent reporting confirming exactly what happened is limited."
+          }
+        }
       ]
     }
   ]

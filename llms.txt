@@ -22,25 +22,13 @@ priority_pages:
       Leatherwood & Schindler, Bailes & Co., GameDay Nearby, Ihrig Properties), the be found / be understood / be supported
       foundation, what AISEOTX builds, a short AISEO definition, and an FAQ.
 
-  - url: https://aiseotx.com/what-is-aiseo/
+  - url: https://aiseotx.com/what-is-aiseo
     summary:
       Definition page for AI Search Optimization: how AI search turns a question into an answer, the 9 pillars of AISEO,
       local, ecommerce, multimodal and agent readiness, and an FAQ.
       Includes a buyer beware section with safeguard questions to vet agencies selling "AISEO" without implementation.
 
-  - url: https://aiseotx.com/credit-cards/american-express/
-    summary:
-      Referral landing page where Ryan W. Bailes explains which American Express credit cards
-      he personally uses as a Texas digital marketer and agency owner, how he uses AI tools
-      like Perplexity, Copilot, and DeepSeek to compare card benefits and map them to real
-      world spending, and provides a single official American Express referral link that
-      sends users directly to the American Express website to view offers and apply.
-    notes:
-      This page is not a bank, lender, or financial advisor page.
-      It is personal experience and education only, with clear plain language disclaimers.
-      All card offers, eligibility, and decisions are controlled by American Express.
-
-  - url: https://aiseotx.com/old-school-tyler/
+  - url: https://aiseotx.com/old-school-tyler
     summary:
       Hub page for Old School Tyler, a small archive of defunct Tyler, Texas tournaments, teams,
       and logos that still show up in local memory and search. It links to deeper entries such as

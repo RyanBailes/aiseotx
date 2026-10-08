@@ -92,8 +92,7 @@ notes:
 
 [priority_pages]
   - https://aiseotx.com/
-  - https://aiseotx.com/what-is-aiseo/
-  - https://aiseotx.com/credit-cards/american-express/
-  - https://aiseotx.com/old-school-tyler/
+  - https://aiseotx.com/what-is-aiseo
+  - https://aiseotx.com/old-school-tyler
   - https://aiseotx.com/eisenhower-classic
   - https://aiseotx.com/tyler-wildcatters

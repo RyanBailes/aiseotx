@@ -1,0 +1,7 @@
+# Cloudflare Pages redirects
+/received-a-letter-about-your-domain                      /received-letter-about-domain-renewal  301
+/received-a-letter-about-your-domain/                     /received-letter-about-domain-renewal  301
+/old-school-tyler/tyler-wildcatters                       /tyler-wildcatters                     301
+/old-school-tyler/tyler-wildcatters/                      /tyler-wildcatters                     301
+/old-school-tyler/eisenhower-international-golf-classic   /eisenhower-classic                    301
+/old-school-tyler/eisenhower-international-golf-classic/  /eisenhower-classic                    301

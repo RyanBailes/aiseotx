@@ -79,6 +79,13 @@ a: The WildCatters remain a recurring search topic in Tyler and often appear in 
 q: Is the WildCatters page affiliated with any league?
 a: No. It is purely historical and not affiliated with any current baseball league, franchise, or organization.
 
+[texas_fruit_palace]
+q: What is the Texas Fruit Festival That Never Happened page?
+a: It is an archive entry for the Texas Fruit Palace, an annual fruit exposition in Tyler, Texas that ran in July 1895, July 1896 and July 1897 at South Vine and West Front streets. It covers the Smith County peach boom, the exposition's exhibits and visitors, the building's later use and 1903 fire, and why Tyler's yearly celebration became the Texas Rose Festival instead of a lasting fruit festival.
+
+q: Was there ever a fruit festival in Tyler?
+a: Briefly. The Texas Fruit Palace ran in 1895, 1896 and 1897 and did not continue as the orchards declined. Peaches were the leading fruit, alongside strawberries, blackberries, plums, pears and grapes.
+
 [contact_path]
 q: How do businesses work with AISEOTX?
 a: All client work is handled through Bailes + Zindler. The call to action directs visitors to https://baileszindler.com/contact to start a project or ask about AI search optimization services.
@@ -96,3 +103,4 @@ notes:
   - https://aiseotx.com/old-school-tyler
   - https://aiseotx.com/eisenhower-classic
   - https://aiseotx.com/tyler-wildcatters
+  - https://aiseotx.com/texas-fruit-festival-that-never-happened
